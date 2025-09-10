@@ -1,6 +1,7 @@
 
 import './App.css'
-import Watch_Live from './Pages/Watch_Live/Watch_Live'
+import HomePage from './HomePage'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
