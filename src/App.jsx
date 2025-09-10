@@ -1,4 +1,4 @@
-
+import GivePage from './pages/GivePage'
 import './App.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
 
       <div>
-       <a></a>
+       <GivePage/>
       </div>
      
 
