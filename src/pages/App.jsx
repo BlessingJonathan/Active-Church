@@ -1,7 +1,7 @@
 
 import './App.css'
-import HomePage from './pages/HomePage'
-import GivePage from './pages/GivePage'
+import HomePage from './HomePage'
+import GivePage from './GivePage'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
