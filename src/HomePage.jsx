@@ -1,4 +1,9 @@
 import React from "react";
+import { useState } from "react";
+import "./HomePage.css";
+import ActiveLogo from './assets/Vector.png';
+import ElvieBen from './assets/WhatsApp Image 2025-09-10 at 11.54.50_ef357714.jpg';
+import ActiveLogo1 from './assets/Vector-1.png';
 
 const HomePage = () => {
   // Sidebar toggle functions (replace with React state if needed)
@@ -14,7 +19,7 @@ const HomePage = () => {
       {/* Navbar */}
       <header className="navbar">
         <div className="logo">
-          <img src="images/Vector.png" alt="logo" />
+          <img src={ActiveLogo} />
         </div>
         <nav className="nav-links">
           <a href="index.html">HOME</a>
@@ -84,7 +89,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src="images/1.png" alt="Hero Image" />
+          <img src={ElvieBen} />
         </div>
       </div>
 
@@ -215,7 +220,9 @@ const HomePage = () => {
       <footer className="site-footer">
         <div className="footer-content">
           <div className="footer-column1">
-            <img src="images/Vector-1.png" alt="The Active Church Logo" className="footer-logo" />
+            <div className="logo">
+            <img src={ActiveLogo1} />
+            </div>
             <p>A Church Raising A New Generation</p>
             <p>A Generation That Will Change This Nation</p>
             <p>To God Be The Glory.</p>
