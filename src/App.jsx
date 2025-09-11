@@ -19,12 +19,12 @@ function App() {
           }
         />
         <Route
-          path='give'
+          path='/give'
           element={
             <GivePage />
           } />
         <Route
-          path='watchlive'
+          path='/watchlive'
           element={
             <Watch_Live />
           }
