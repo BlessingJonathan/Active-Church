@@ -147,19 +147,28 @@ body, html, #root, .App {
   pointer-events: none;
 }
 
-/* Welcome Section */
 .welcome-section {
   width: 100vw;
-  background: #f7f7f7;
+  background: 
+    linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
+    url('../assets/section1.png') center/cover no-repeat;
   padding: 64px 0 0 0;
   text-align: center;
   position: relative;
+  overflow: hidden;
+}
+.welcome-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+ /* background: rgba(255,255,255,0.86);*/
+  pointer-events: none;
 }
 .welcome-title {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #222;
+  color: black;
 }
 .welcome-subtitle {
   font-size: 1.1rem;
@@ -169,7 +178,7 @@ body, html, #root, .App {
 .pillars-container {
   display: flex;
   justify-content: center;
-  gap: 48px;
+  gap: 200px;
   margin-bottom: 48px;
 }
 .pillar {
@@ -178,10 +187,20 @@ body, html, #root, .App {
   text-align: center;
   max-width: 220px;
 }
-.iconpillar i {
-  font-size: 2.2rem;
+.icon-circle {
+  width: 88px;
+  height: 88px;
+  background: #000;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.icon-circle svg {
   color: #e53935;
-  margin-bottom: 8px;
+  font-size: 28px !important;
 }
 .pillar-title {
   font-size: 1.2rem;
@@ -190,7 +209,7 @@ body, html, #root, .App {
 }
 .pillar-description {
   font-size: 1rem;
-  color: #555;
+  color:black;
 }
 
 /* Upcoming Events */
@@ -206,19 +225,19 @@ body, html, #root, .App {
 }
 .events-subtitle {
   font-size: 1rem;
-  color: #444;
+  color:black;
   margin-bottom: 32px;
 }
 .events-container {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 90px;
 }
 .event-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  padding: 32px 24px;
+  padding: 30px 46px;
   min-width: 240px;
   max-width: 320px;
   text-align: left;

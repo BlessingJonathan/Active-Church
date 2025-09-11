@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.css';
 import FooterLogo from '../assets/Vector-1.png';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
@@ -12,10 +15,17 @@ const Footer = () => {
           <p>A Generation That Will Change This Nation</p>
           <p>To God Be The Glory.</p>
           <div className="footer-social">
-            <a href="#">FB</a>
-            <a href="#">IG</a>
-            <a href="#">YT</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FacebookIcon fontSize="large" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon fontSize="large" />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <YouTubeIcon fontSize="large" />
+            </a>
           </div>
+        
         </div>
         <div className="footer-column">
           <h4>Quick Links</h4>

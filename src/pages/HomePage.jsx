@@ -4,6 +4,9 @@ import "./HomePage.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroCollage from '../assets/WhatsApp Image 2025-09-10 at 11.54.50_ef357714.jpg';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import GroupIcon from '@mui/icons-material/Group';
 
 const HomePage = () => {
   return (
@@ -34,17 +37,17 @@ const HomePage = () => {
         <p className="welcome-subtitle">Whether you're new to faith or have been walking with Christ for years,<br />The Active Church is a place where you can belong, grow, and serve.</p>
         <div className="pillars-container">
           <div className="pillar">
-            <span className="iconpillar"><i className="fas fa-heart"></i></span>
+            <div className="icon-circle"><FavoriteIcon fontSize="large" /></div>
             <h3 className="pillar-title">Belong</h3>
             <p className="pillar-description">Find your place in our loving community where everyone is welcome.</p>
           </div>
           <div className="pillar">
-            <span className="iconpillar"><i className="fas fa-book-open"></i></span>
+            <div className="icon-circle"><MenuBookIcon fontSize="large" /></div>
             <h3 className="pillar-title">Grow</h3>
             <p className="pillar-description">Deepen your faith through worship, study, and fellowship.</p>
           </div>
           <div className="pillar">
-            <span className="iconpillar"><i className="fas fa-users"></i></span>
+            <div className="icon-circle"><GroupIcon fontSize="large" /></div>
             <h3 className="pillar-title">Serve</h3>
             <p className="pillar-description">Make a difference in our community and beyond through service.</p>
           </div>
