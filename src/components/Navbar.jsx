@@ -7,13 +7,15 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="logo">
-        <Link to="/"><img src={ActiveLogo} alt="The Active Church Logo" /></Link>
+        <Link to="/">
+          <img src={ActiveLogo} alt="The Active Church Logo" />
+        </Link>
       </div>
       <nav className="nav-links">
-        <a href="#">OUR VISION</a>
+        <Link to="/vision">OUR VISION</Link>
         <Link to="/give">GIVE</Link>
-        <a href="#">WATCH LIVE</a>
-        <a href="#">CONTACT US</a>
+        <Link to="/watch">WATCH LIVE</Link>
+        <Link to="/contact">CONTACT US</Link>
       </nav>
     </header>
   );
