@@ -1,0 +1,382 @@
+/* Base Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Banner Section */
+.bannerOne {
+    width: 100vw;
+    height: 50vh;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../../assets/SnapInsta.to_503623098_18325249387205809_8496022288480080064_n.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+}
+
+.bannerOne p {
+    backdrop-filter: opacity(200px);
+    text-align: center;
+    font-size: clamp(14px, 3vw, 18px);
+    max-width: 90%;
+}
+
+.bannerOne h1 {
+    font-size: clamp(24px, 6vw, 40px);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Timer Section */
+.timerSection {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.timerBlock {
+    width: min(95%, 1200px);
+    height: auto;
+    min-height: 80vh;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px 0.1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.timerBlock h2 {
+    color: rgb(0, 0, 184);
+    font-size: clamp(18px, 4vw, 28px);
+    text-align: center;
+}
+
+.timerBlock p {
+    color: rgb(0, 0, 184);
+    font-weight: 100;
+    font-size: clamp(14px, 3vw, 16px);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.timer {
+    background: url('../../assets/Banner.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: clamp(40px, 8vw, 100px);
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    flex: 1;
+}
+
+.time-label {
+    font-size: clamp(20px, 4vw, 50px);
+    margin-top: clamp(-30px, -3vw, -90px);
+}
+
+.platform-btn {
+    width: min(80%, 500px);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.platform-btn a {
+    text-decoration: none;
+    flex: 1;
+    min-width: 120px;
+}
+
+.platform-btn .btn {
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(14px, 2.5vw, 16px);
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yt {
+    color: white;
+    /* background-color: red; */
+}
+
+.yt:hover {
+    background-color: darkred;
+}
+
+.fb {
+    background-color: blue;
+    color: white;
+}
+
+.fb:hover {
+    background-color: darkblue;
+}
+
+/* Duo Section */
+.duo-sec {
+    background: url('../../assets/Section.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Upcoming Services Section */
+.uc-Services {
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff90;
+    padding: 2rem 1rem;
+}
+
+.uc-Services h1 {
+    font-size: clamp(24px, 5vw, 30px);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services, .platforms {
+    width: min(95%, 1200px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.serv-blk, .plfrm {
+    width: min(100%, 400px);
+    flex: 1;
+    min-width: 280px;
+    /* border:1px solid red; */
+}
+
+/* How to Watch Section */
+.howToWatch {
+    width: 100vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #00000090;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.howToWatch h1 {
+    font-size: clamp(24px, 5vw, 30px);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.howToWatch .services {
+    width: min(90%, 1000px);
+}
+
+.howToWatch .platforms {
+    min-height: 300px;
+    height: auto;
+}
+
+.howToWatch .serv-blk .plfrm {
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #ffffff83;
+    border-radius: 5px;
+    height: auto;
+    /* border:1px solid red; */
+    min-height: 250px;
+}
+
+.plfrm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+}
+
+.plfrm p {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: clamp(14px, 2.5vw, 16px);
+}
+
+.plfrm p:nth-child(4) {
+    font-weight: 100;
+    font-size: clamp(13px, 2vw, 15px);
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: clamp(16px, 3vw, 18px);
+}
+
+.YouTube, .FaceBook {
+    width: clamp(60px, 15vw, 80px);
+    height: clamp(60px, 15vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 1rem auto;
+}
+
+/* Mobile Specific Styles */
+@media screen and (max-width: 768px) {
+    .bannerOne {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .timer {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0.5rem;
+        min-height: 250px;
+    }
+    
+    .time-box {
+        margin-bottom: 1rem;
+    }
+    
+    .time-label {
+        margin-top: 0.5rem;
+    }
+    
+    .platform-btn {
+        width: 90%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .platform-btn a {
+        width: 100%;
+    }
+    
+    .services, .platforms {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .serv-blk, .plfrm {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .howToWatch .serv-blk {
+        padding: 1.5rem 1rem;
+        min-height: 200px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .timerSection {
+        padding: 1rem 0.5rem;
+    }
+    
+    .timerBlock {
+        width: 98%;
+        padding: 1rem 0.5rem;
+    }
+    
+    .timer {
+        padding: 1rem 0.5rem;
+        font-size: clamp(30px, 10vw, 60px);
+    }
+    
+    .uc-Services, .howToWatch {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .howToWatch .serv-blk {
+        padding: 1rem;
+    
+    }
+    
+    .YouTube, .FaceBook {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Large Desktop Styles */
+@media screen and (min-width: 1200px) {
+    .timerBlock {
+        width: 80%;
+        max-width: 1400px;
+    }
+    
+    .services, .platforms {
+        max-width: 1200px;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .bannerOne {
+        height: 80vh;
+    }
+    
+    .timerSection {
+        min-height: 120vh;
+    }
+    
+    .timer {
+        flex-direction: row;
+        min-height: 200px;
+    }
+}
