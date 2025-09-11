@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import FooterLogo from '../assets/Vector-1.png';
+import FooterLogo from '../assets/Vector.png';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -30,10 +30,10 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Our Vision</a></li>
-            <li><a href="#">Service Times</a></li>
-            <li><a href="#">Give Online</a></li>
-            <li><a href="#">Watch Live</a></li>
+            <li><a href="/vision">Our Vision</a></li>
+            <li><a href="/service">Service Times</a></li>
+            <li><a href="/give">Give Online</a></li>
+            <li><a href="/watchlive">Watch Live</a></li>
           </ul>
         </div>
         <div className="footer-column">

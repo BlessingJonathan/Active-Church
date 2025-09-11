@@ -1,9 +1,9 @@
 
 import './App.css'
-import HomePage from './HomePage'
+import HomePage from './pages/HomePage'
 import { Routes, Route } from 'react-router-dom'
-import GivePage from './Pages/GivePage'
-import Watch_Live from './Pages/Watch_Live/Watch_Live'
+import GivePage from './pages/GivePage'
+import Watch_Live from './pages/Watch_Live'
 
 
 function App() {
