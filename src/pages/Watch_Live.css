@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('../../assets/SnapInsta.to_503623098_18325249387205809_8496022288480080064_n.png');
+    background: url('../assets/SnapInsta.to_503623098_18325249387205809_8496022288480080064_n.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -76,7 +76,7 @@
 }
 
 .timer {
-    background: url('../../assets/Banner.png');
+    background: url('../assets/Banner.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -158,7 +158,7 @@
 
 /* Duo Section */
 .duo-sec {
-    background: url('../../assets/Section.png');
+    background: url('../assets/Section.png');
     background-size: cover;
     background-position: center;
 }

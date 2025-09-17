@@ -1,9 +1,9 @@
 
 import './App.css'
-import HomePage from './HomePage'
+import HomePage from './pages/HomePage'
 import { Routes, Route } from 'react-router-dom'
-import GivePage from './Pages/GivePage'
-import Watch_Live from './Pages/Watch_Live/Watch_Live'
+import GivePage from './pages/GivePage'
+import Watch_Live from './pages/Watch_Live'
 import Contact_Us from './Pages/Contact_Us/Contact_Us'
 
 
@@ -20,12 +20,12 @@ function App() {
           }
         />
         <Route
-          path='give'
+          path='/give'
           element={
             <GivePage />
           } />
         <Route
-          path='watchlive'
+          path='/watchlive'
           element={
             <Watch_Live />
           }

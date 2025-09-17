@@ -1,0 +1,442 @@
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 56px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  height: 72px;
+}
+.logo img {
+  height: 48px;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-right: 100px;
+}
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.15s ease;
+}
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Banner/Hero */
+.banner {
+  width: 100vw;
+  min-height: 720px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png') right/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 92px; /* account for fixed navbar */
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.hero-left {
+  flex: 0 0 58%;
+  
+  margin-right: 10%;
+  padding: 88px 0 88px 72px;
+  color: #fff;
+  z-index: 2;
+}
+.hero-left h1 {
+  font-size: 5.4rem;
+  font-weight: 900;
+  margin: 4px 0 18px 0;
+  line-height: 1.02;
+}
+.hero-left h1 span {
+  display: block;
+}
+.hero-left p {
+  font-size: 1.15rem;
+  margin-bottom: 28px;
+  color: rgba(255,255,255,0.92);
+  max-width: 620px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+}
+.btn {
+  padding: 12px 34px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn.primary {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+.btn.primary:hover,
+.btn.secondary:hover {
+  transform: translateY(-2px);
+}
+.iconjoin i {
+  color: #007bff;
+  font-size: 1.2rem;
+}
+.hero-right {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 36px;
+  z-index: 30;
+}
+.hero-right .hero-collage {
+  width: 600px;
+  max-width: 48vw;
+  margin-right: 40%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.6);
+  transform: translateX(28px) translateY(6px);
+}
+
+/* dark gradient vignette to match screenshot */
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at right, rgba(0,0,0,0) 30%, rgba(0,0,0,0.55) 70%);
+  pointer-events: none;
+}
+
+.welcome-section {
+  width: 100vw;
+  background: 
+    linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
+    url('../assets/section1.png') center/cover no-repeat;
+  padding: 64px 0 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.welcome-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+ /* background: rgba(255,255,255,0.86);*/
+  pointer-events: none;
+}
+.welcome-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: black;
+}
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+.pillars-container {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-bottom: 48px;
+}
+.pillar {
+  background: transparent;
+  padding: 0 24px;
+  text-align: center;
+  max-width: 220px;
+}
+.icon-circle {
+  width: 88px;
+  height: 88px;
+  background: #000;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.icon-circle svg {
+  color: #e53935;
+  font-size: 28px !important;
+}
+.pillar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.pillar-description {
+  font-size: 1rem;
+  color:black;
+}
+
+/* Upcoming Events */
+.upcoming-events {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+.events-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+.events-subtitle {
+  font-size: 1rem;
+  color:black;
+  margin-bottom: 32px;
+}
+.events-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 30px 46px;
+  min-width: 240px;
+  max-width: 320px;
+  text-align: left;
+}
+.event-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.event-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detail-text {
+  font-size: 1rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon i {
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 64px 0 64px 0;
+}
+.cta-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+.contact-btn {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.contact-btn:hover {
+  background: #eaeaea;
+}
+
+/* Footer */
+.site-footer {
+  background: black;
+  color: #fff;
+  padding: 48px 0 0 0;
+  text-align: left;
+  width: 100vw;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-column1 {
+  flex: 1;
+  min-width: 220px;
+}
+.footer-logo {
+  height: 32px;
+  margin-bottom: 12px;
+}
+.footer-column {
+  flex: 1;
+  min-width: 180px;
+}
+.footer-column h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+.footer-column p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 32px 0 0 0;
+}
+.copyright {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #aaa;
+  margin: 16px 0 0 0;
+  padding-bottom: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 24px 16px 0 16px;
+  }
+  .banner {
+    flex-direction: column;
+    padding-top: 80px;
+    min-height: 600px;
+  }
+  .hero-text {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .pillars-container {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .events-container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 8px 0 8px;
+  }
+  .nav-links {
+    gap: 16px;
+    font-size: 0.95rem;
+  }
+  .banner {
+    min-height: 480px;
+    padding-top: 60px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text span {
+    font-size: 1.4rem;
+  }
+  .welcome-title {
+    font-size: 1.4rem;
+  }
+  .pillars-container {
+    gap: 16px;
+  }
+  .event-card {
+    min-width: 180px;
+    padding: 20px 10px;
+  }
+  .footer-content {
+    padding: 0 8px;
+  }
+}
+
+/* Hide horizontal scrollbar */
+body, html, #root, .App {
+  overflow-x: hidden !important;
+}
