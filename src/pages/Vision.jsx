@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import { Container, Typography, Box, Grid } from "@mui/material";
 function Vision() {
   return (
@@ -212,12 +216,14 @@ function Vision() {
             sx={{
               textAlign: "center",
               fontWeight: "bold",
-              mb: 6,
+              mb: 1,
               color: "black",
             }}
           >
             What We Believe
           </Typography>
+          <Typography sx={{textAlign:"center", mb: 3 ,}}>Our beliefs are rooted in Scripture and centered on the Gospel of Jesus
+Christ.</Typography>
 
           {/* Cards Grid */}
           <Grid container spacing={4}>
@@ -248,7 +254,8 @@ function Vision() {
                     flexShrink: 0,
                   }}
                 >
-                  <span style={{ color: "red", fontSize: "36px" }}>★</span>
+                  
+                  <ImportContactsIcon sx={{color:"red",fontSize:"36px"}}/>
                 </Box>
                 <Box>
                   <Typography
@@ -294,7 +301,8 @@ function Vision() {
                     flexShrink: 0,
                   }}
                 >
-                  <span style={{ color: "red", fontSize: "36px" }}>★</span>
+                  
+                  <FavoriteBorderOutlinedIcon sx={{ color: "red", fontSize: "36px" }}/>
                 </Box>
                 <Box>
                   <Typography
@@ -340,7 +348,7 @@ function Vision() {
                     flexShrink: 0,
                   }}
                 >
-                  <span style={{ color: "red", fontSize: "36px" }}>★</span>
+                  <PeopleAltOutlinedIcon sx={{color:"red",fontSize:"36px"}}/>
                 </Box>
                 <Box>
                   <Typography
@@ -386,7 +394,7 @@ function Vision() {
                     flexShrink: 0,
                   }}
                 >
-                  <span style={{ color: "red", fontSize: "36px" }}>★</span>
+                  <LanguageOutlinedIcon sx={{ color: "red", fontSize: "36px"}}/>
                 </Box>
                 <Box>
                   <Typography
@@ -407,131 +415,72 @@ function Vision() {
           </Grid>
         </Container>
       </section>
-<section  style={{
-          position: "relative",
-          padding: "4rem 0",
-          backgroundImage: "url('src/assets/Group 105.jpeg')", // Change this path
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width:"100%",
-          height:"15%"
-        }}>
-
-</section>
-
-<section
-  style={{
-    position: "relative",
-    padding: "6rem 0",
-    backgroundImage: "url('src/assets/leadership-bg.jpg')", // Replace with your leadership background image
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    color: "white",
-    textAlign: "center",
+{/* Meet Our Leadership Section */}
+{/* Wrapper to add spacing around the image section */}
+<Box
+  sx={{
+    paddingLeft: "8rem",
+    paddingRight:"8rem",
+    paddingTop:"6rem",
+    paddingBottom:"6rem" // space on all sides (adjust as needed)
   }}
 >
-  {/* Overlay for blur / dim effect */}
-  <div
+  <section
     style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: "rgba(0,0,0,0.5)",
-      backdropFilter: "blur(2px)",
-      zIndex: 1,
+      position: "relative",
+      marginTop: "0",
+      backgroundImage: "url('src/assets/Group 105.png')", // Replace with your leadership background
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      color: "white",
+      width: "100%",
+      minHeight: "60vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      padding: "3rem 0",
+      borderRadius: "20px", // optional: makes edges rounded
+      overflow: "hidden",   // ensures background doesn’t bleed past radius
     }}
-  ></div>
-
-  <Container sx={{ position: "relative", zIndex: 2 }}>
-    {/* Section Title */}
-    <Typography
-      variant="h3"
+  >
+    <Container
       sx={{
-        fontWeight: "bold",
-        mb: 4,
+        position: "relative",
+        zIndex: 2,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
-      Meet Our Leadership
-    </Typography>
-    <Typography
-      variant="h5"
-      sx={{ mb: 6 }}
-    >
-      Meet Our Pastors
-    </Typography>
+      {/* Top Title */}
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: "bold",
+          textAlign: "center",
+        }}
+      >
+       Our Leadership
+      </Typography>
 
-    {/* Leadership Grid */}
-    <Grid container spacing={4} justifyContent="center">
-      {/* Example Pastor Card */}
-      <Grid item xs={12} sm={6} md={3}>
-        <Box
-          sx={{
-            backgroundColor: "rgba(255,255,255,0.1)",
-            borderRadius: "16px",
-            padding: "1.5rem",
-            textAlign: "center",
-            backdropFilter: "blur(10px)",
-          }}
-        >
-          <Box
-            component="img"
-            src="src/assets/pastor1.jpg" // Replace with pastor image
-            alt="Pastor Name"
-            sx={{
-              width: "100%",
-              borderRadius: "50%",
-              mb: 2,
-              boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-              objectFit: "cover",
-            }}
-          />
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
-            Pastor Name
-          </Typography>
-          <Typography variant="body2">
-            Brief description about the pastor.
-          </Typography>
-        </Box>
-      </Grid>
 
-      {/* Repeat more pastor cards */}
-      <Grid item xs={12} sm={6} md={3}>
-        <Box
-          sx={{
-            backgroundColor: "rgba(255,255,255,0.1)",
-            borderRadius: "16px",
-            padding: "1.5rem",
-            textAlign: "center",
-            backdropFilter: "blur(10px)",
-          }}
-        >
-          <Box
-            component="img"
-            src="src/assets/pastor2.jpg"
-            alt="Pastor Name"
-            sx={{
-              width: "100%",
-              borderRadius: "50%",
-              mb: 2,
-              boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-              objectFit: "cover",
-            }}
-          />
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
-            Pastor Name
-          </Typography>
-          <Typography variant="body2">
-            Brief description about the pastor.
-          </Typography>
-        </Box>
-      </Grid>
-    </Grid>
-  </Container>
-</section>
+      {/* Bottom Text */}
+      <Typography
+        variant="h5"
+        sx={{
+          textAlign: "center",
+          mt: 4,
+        }}
+      >
+        Meet Our Pastors 
+      </Typography>
+    </Container>
+  </section>
+</Box>
+
+
 
       <Footer />
     </div>
