@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import { Routes, Route } from 'react-router-dom'
 import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
-
+import Vision from "./pages/Vision"
 
 function App() {
 
@@ -27,6 +27,12 @@ function App() {
           path='/watchlive'
           element={
             <Watch_Live />
+          }
+        />
+         <Route
+          path='/ourvision'
+          element={
+            <Vision />
           }
         />
       </Routes>
