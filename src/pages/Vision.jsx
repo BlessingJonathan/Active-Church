@@ -4,6 +4,9 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import { Container, Typography, Box, Grid } from "@mui/material";
+import Children from "../assets/kidschurch.jpg";
+import Youth from "../assets/youth.jpg";
+import Banner from "../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png"
 function Vision() {
   return (
     <div>
@@ -16,8 +19,7 @@ function Vision() {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          backgroundImage:
-            "url('src/assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png')",
+          backgroundImage:{Banner},
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -124,7 +126,7 @@ function Vision() {
             {/* Image */}
             <Box
               component="img"
-              src="src/assets/kidschurch.jpg" // Change path
+              src={Children} // Change path
               alt="Active Church Kids"
               sx={{
                 width: { xs: "100%", md: "40%" },
@@ -183,7 +185,7 @@ function Vision() {
             {/* Image */}
             <Box
               component="img"
-              src="src/assets/youth.jpg" // Change path
+              src={Youth} // Change path
               alt="Active Youth"
               sx={{
                 width: { xs: "100%", md: "40%" },

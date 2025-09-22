@@ -9,7 +9,11 @@ import {
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import "./GivePage.css";
-
+import WhyWeGivepic from "../assets/SnapInsta.to_504484732_18326229409205809_958354511391319144_n.png"
+import Payment from "../assets/qrcode.jpeg";
+import QRcode from "../assets/QR-code (1)(1).png";
+import BankDetails from "../assets/Frame 93.png";
+import Hero from "../assets/SnapInsta.to_504361137_18326229442205809_1207328382216318209_n.png"
 const GivePage = () => {
   const textFieldStyle = {
     "& .MuiOutlinedInput-root": {
@@ -36,7 +40,7 @@ const GivePage = () => {
           alignItems: "center",
           textAlign: "center",
           backgroundImage:
-            "url('src/assets/SnapInsta.to_504361137_18326229442205809_1207328382216318209_n.png')",
+            {Hero},
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -319,7 +323,7 @@ const GivePage = () => {
             padding: "5% 3%",
             boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
             maxWidth: "80%",
-            backgroundImage: "url('src/assets/Frame 93.png')",
+            backgroundImage: {BankDetails},
             backgroundSize: "cover",
             backgroundPosition: "center",
             mt: 8,
@@ -362,7 +366,7 @@ const GivePage = () => {
                 SCAN, PAY, AND ENJOY YOUR DAY
               </Typography>
               <img
-                src="src/assets/qrcode.jpeg"
+                src={Payment}
                 alt="Payment Options"
                 style={{
                   maxWidth: "180px",
@@ -371,7 +375,7 @@ const GivePage = () => {
                 }}
               />
               <img
-                src="src/assets/QR-code (1)(1).png"
+                src={QRcode}
                 alt="QR Code"
                 style={{ maxWidth: "180px", maxHeight: "120px" }}
               />
@@ -587,7 +591,7 @@ const GivePage = () => {
         style={{
           position: "relative",
           backgroundImage:
-            "url('src/assets/SnapInsta.to_504484732_18326229409205809_958354511391319144_n.png')",
+            {WhyWeGivepic},
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "80px 20px",
