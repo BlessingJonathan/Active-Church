@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link to="/ourvision">OUR VISION</Link>
         <Link to="/give">GIVE</Link>
         <Link to="/watchlive">WATCH LIVE</Link>
-        <Link to="/contact">CONTACT US</Link>
+        <Link to="/contactus">CONTACT US</Link>
       </nav>
     </header>
   );

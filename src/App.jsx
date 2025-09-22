@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
 import Vision from "./pages/Vision"
-import Contact_Us from './Pages/Contact_Us/Contact_Us'
+import Contact_Us from './pages/Contact_Us'
 
 
 function App() {

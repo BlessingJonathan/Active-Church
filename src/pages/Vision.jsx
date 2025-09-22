@@ -107,92 +107,114 @@ function Vision() {
       </section>
 
       <section style={{ padding: "2rem 0" }}>
-        <Container>
-          {/* Row 1: Image Left, Text Right */}
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "center",
-              justifyContent: "space-between",
-              mb: 6, // spacing between rows
-              gap: "2rem",
-            }}
-          >
-            {/* Image */}
-            <Box
-              component="img"
-              src="src/assets/kidschurch.jpg" // Change path
-              alt="Active Church Kids"
-              sx={{
-                width: { xs: "100%", md: "40%" },
-                borderRadius: "16px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-                objectFit: "cover",
-              }}
-            />
-            {/* Text */}
-            <Box sx={{ flex: 1, maxWidth: "600px" }}>
-              <Typography
-                variant="h4"
-                sx={{
-                  mb: 2,
-                  fontStyle: "italic",
-                  fontFamily: "'Inter', 'sans-serif'",
-                }}
-              >
-                Active Children's Church
-              </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
-                Kids can learn about Jesus and how to have a relationship with
-                Him in a very exciting way, bringing the Bible to life for them.
-                We are committed to providing a fun and safe environment where
-                children can grow spiritually and connect with others.
-              </Typography>
-            </Box>
-          </Box>
+  <Container
+    maxWidth={false} // let container grow full width
+    sx={{
+      maxWidth: "1400px", // keeps content centered and not too stretched
+      mx: "auto",
+      px: { xs: 2, md: 4 },
+    }}
+  >
+    {/* Row 1: Image Left, Text Right */}
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "space-between",
+        mb: 6,
+        gap: "2rem",
+      }}
+    >
+      {/* Image */}
+      <Box
+        component="img"
+        src="src/assets/kidschurch.jpg"
+        alt="Active Church Kids"
+        sx={{
+          flex: 1,
+          minWidth: "300px",
+          maxWidth: { xs: "100%", md: "45%" }, // scale better
+          borderRadius: "16px",
+          boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+          objectFit: "cover",
+        }}
+      />
+      {/* Text */}
+      <Box sx={{ flex: 1, minWidth: "300px", maxWidth: { xs: "100%", md: "50%" } }}>
+        <Typography
+          variant="h4"
+          sx={{
+            mb: 2,
+            fontStyle: "italic",
+            fontFamily: "'Inter', sans-serif",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "clip",
+          }}
+        >
+          Active Youth
+        </Typography>
+        <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
+          Kids can learn about Jesus and how to have a relationship with Him in
+          a very exciting way, bringing the Bible to life for them. We are
+          committed to providing a fun and safe environment where children can
+          grow spiritually and connect with others.
+        </Typography>
+      </Box>
+    </Box>
 
-          {/* Row 2: Text Left, Image Right */}
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap-reverse", // reverse order for mobile
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: "2rem",
-            }}
-          >
-            {/* Text */}
-            <Box sx={{ flex: 1, maxWidth: "600px" }}>
-              <Typography
-                variant="h4"
-                sx={{ mb: 2, fontStyle: "italic", fontFamily: "'Inter-sans" }}
-              >
-                Active Youth
-              </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
-                Active Youth is about young people who are passionate about
-                Christ. It’s about youth who are winning in their lives and
-                pursuing a relationship with their Saviour as they change the
-                world around them. Enjoy a great variety of entertaining
-                evenings mixed with the power of the Word.
-              </Typography>
-            </Box>
-            {/* Image */}
-            <Box
-              component="img"
-              src="src/assets/youth.jpg" // Change path
-              alt="Active Youth"
-              sx={{
-                width: { xs: "100%", md: "40%" },
-                borderRadius: "16px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-                objectFit: "cover",
-              }}
-            />
-          </Box>
-        </Container>
-      </section>
+    {/* Row 2: Text Left, Image Right */}
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap-reverse",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "2rem",
+      }}
+    >
+      {/* Text */}
+      <Box sx={{ flex: 1, minWidth: "300px", maxWidth: { xs: "100%", md: "50%" } }}>
+        <Typography
+          variant="h4"
+          sx={{
+            mb: 2,
+            fontStyle: "italic",
+            fontFamily: "'Inter', sans-serif",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "clip",
+          }}
+        >
+          Active Youth
+        </Typography>
+        <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
+          Active Youth is about young people who are passionate about Christ.
+          It’s about youth who are winning in their lives and pursuing a
+          relationship with their Saviour as they change the world around
+          them. Enjoy a great variety of entertaining evenings mixed with the
+          power of the Word.
+        </Typography>
+      </Box>
+      {/* Image */}
+      <Box
+        component="img"
+        src="src/assets/youth.jpg"
+        alt="Active Youth"
+        sx={{
+          flex: 1,
+          minWidth: "300px",
+          maxWidth: { xs: "100%", md: "45%" }, // scale better
+          borderRadius: "16px",
+          boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+          objectFit: "cover",
+        }}
+      />
+    </Box>
+  </Container>
+</section>
+
 
       <section
         style={{
@@ -461,86 +483,82 @@ function Vision() {
       </section>
       {/* Meet Our Leadership Section */}
       {/* Wrapper to add spacing around the image section */}
- <Box
-  sx={{
-    display: "flex",
-    justifyContent: "center",
-  }}
->
-  <div
-    style={{
-      width: "80%",
-      borderRadius: "20px",
-      overflow: "hidden",
-      backgroundColor: "white",
-      height: "100%",
-      textAlign: "center",
-      position: "relative",
-    }}
-  >
-    {/* Background Image Section */}
-    <section
-      style={{
-        position: "relative",
-        margin: 0,
-        backgroundImage: "url('src/assets/Group 105.png')",
-        backgroundSize: "contain", // keeps it filled
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        color: "white",
-        minHeight: "80vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      {/* Top Titles */}
       <Box
         sx={{
-          position: "absolute",
-          top: "1rem",
-          left: "50%",
-          transform:" translate(-50%, 20%)",
-          textAlign: "center",
-          zIndex: 3,
+          display: "flex",
+          justifyContent: "center",
         }}
       >
-        <Typography
-          variant="h4"
-          sx={{ fontWeight: "bold", color: "black" }}
+        <div
+          style={{
+            width: "80%",
+            borderRadius: "20px",
+            overflow: "hidden",
+            backgroundColor: "white",
+            height: "100%",
+            textAlign: "center",
+            position: "relative",
+          }}
         >
-          Our Leadership
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{ color: "grey", mt: 0.5 }}
-        >
-          Meet our Pastors
-        </Typography>
-      </Box>
+          {/* Background Image Section */}
+          <section
+            style={{
+              position: "relative",
+              margin: 0,
+              backgroundImage: "url('src/assets/Group 105.png')",
+              backgroundSize: "contain", // keeps it filled
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              color: "white",
+              minHeight: "80vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {/* Top Titles */}
+            <Box
+              sx={{
+                position: "absolute",
+                top: "1rem",
+                left: "50%",
+                transform: " translate(-50%, 20%)",
+                textAlign: "center",
+                zIndex: 3,
+              }}
+            >
+              <Typography
+                variant="h4"
+                sx={{ fontWeight: "bold", color: "black" }}
+              >
+                Our Leadership
+              </Typography>
+              <Typography variant="h5" sx={{ color: "grey", mt: 0.5 }}>
+                Meet our Pastors
+              </Typography>
+            </Box>
 
-      {/* Bottom Title */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: "1rem",
-          left: "50%",
-          transform:" translate(-50%, -40%)",
-          textAlign: "center",
-          zIndex: 3,
-        }}
-      >
-        <Typography
-          variant="h5"
-          sx={{ fontWeight: "bold", color: "black" }}
-        >
-          Pastor Gavin & Pastor Vicky
-        </Typography>
+            {/* Bottom Title */}
+            <Box
+              sx={{
+                position: "absolute",
+                bottom: "1rem",
+                left: "50%",
+                transform: " translate(-50%, -40%)",
+                textAlign: "center",
+                zIndex: 3,
+              }}
+            >
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", color: "black" }}
+              >
+                Pastor Gavin & Pastor Vicky
+              </Typography>
+            </Box>
+          </section>
+        </div>
       </Box>
-    </section>
-  </div>
-</Box>
-
 
       <Footer />
     </div>
