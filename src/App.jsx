@@ -5,6 +5,8 @@ import { Routes, Route } from 'react-router-dom'
 import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
 import Vision from "./pages/Vision"
+import Contact_Us from './Pages/Contact_Us/Contact_Us'
+
 
 function App() {
 
@@ -33,6 +35,11 @@ function App() {
           path='/ourvision'
           element={
             <Vision />
+          }
+        /> <Route
+          path='/contactus'
+          element={
+            <Contact_Us />
           }
         />
       </Routes>
