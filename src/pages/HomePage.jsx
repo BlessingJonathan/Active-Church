@@ -8,7 +8,6 @@ import GroupIcon from '@mui/icons-material/Group';
 const HomePage = () => {
   return (
     <div>
-  <Navbar />
 
       <section className="banner">
         <div className="hero-left">
