@@ -22,6 +22,7 @@
     color: white;
     background-color: black;
     padding: 1rem;
+    margin-top:80px;
 }
 
 .bannerOne p {
@@ -40,7 +41,7 @@
 /* Timer Section */
 .timerSection {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 120vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,8 +51,8 @@
 
 .timerBlock {
     width: min(95%, 1200px);
-    height: auto;
-    min-height: 80vh;
+    height: 90%;
+    min-height: 110vh;
     border-radius: 15px;
     box-shadow: 1px 1px 3px 0.1px;
     display: flex;
@@ -82,7 +83,7 @@
     color: white;
     font-size: clamp(40px, 8vw, 100px);
     width: 100%;
-    min-height: 300px;
+    min-height: 500px;
     height: auto;
     display: flex;
     align-items: center;
@@ -190,12 +191,32 @@
     flex-wrap: wrap;
 }
 
-.serv-blk, .plfrm {
-    width: min(100%, 400px);
+.plfrm {
+    /* width: min(100%, 400px); */
     flex: 1;
-    min-width: 280px;
-    /* border:1px solid red; */
+    width: 200px;
 }
+
+.serv-blk{
+    /* border:1px solid red; */
+    width: 40%;;
+    height:200px;
+    padding:20px 40px;
+    border-radius: 10px;
+    background-color: #dcdcdc90;
+}
+
+.serv-blk p{
+    display: flex;
+    /* border:1px solid red; */
+    /* justify-content: space-around; */
+    width:200px;
+}
+
+.serv-blk p span{
+    margin-left:20px
+}
+
 
 /* How to Watch Section */
 .howToWatch {
@@ -208,6 +229,7 @@
     background-color: #00000090;
     color: white;
     padding: 2rem 1rem;
+    /* border:1px solid red; */
 }
 
 .howToWatch h1 {
@@ -239,6 +261,7 @@
 }
 
 .plfrm {
+    /* border:1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -8,15 +8,16 @@
 .hero-sect{
     width: 100vw;
     height: 40vh;
-    border:1px solid red;
+    /* border:1px solid red; */
     /* margin-bottom: 20px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('../../assets/SnapInsta.to_504806520_18326229370205809_8636710689607754357_n.png');
-    color:white
+    background-image: url('../assets/SnapInsta.to_504806520_18326229370205809_8636710689607754357_n.png');
+    color:white;
+    margin-top: 80px;;
 }
 
 .hero-sect h1{
