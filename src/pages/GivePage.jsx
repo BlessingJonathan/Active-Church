@@ -8,8 +8,6 @@ import {
 } from "@mui/material";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import ApartmentIcon from "@mui/icons-material/Apartment";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import "./GivePage.css";
 
 const GivePage = () => {
@@ -27,7 +25,6 @@ const GivePage = () => {
   return (
     <div>
       {/* Navbar */}
-      <Navbar />
 
       {/* Hero Section */}
       <section
@@ -630,8 +627,6 @@ const GivePage = () => {
         </Typography>
       </section>
 
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

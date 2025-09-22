@@ -1,10 +1,8 @@
 import React from 'react'
 import Input from '@mui/joy/Input';
-// import Button from '@mui/joy/Button';
-// import { useState, useEffect } from 'react';
+
 import './Contact_Us.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+
 
 
 function Contact_Us() {
@@ -12,7 +10,7 @@ function Contact_Us() {
     return (
         <>
 
-        <Navbar/>
+        
 
             {/* =========== Hero Section =============== */}
 
@@ -139,7 +137,7 @@ function Contact_Us() {
 
                 </div>
             </section>
-            <Footer/>
+            
         </>
     )
 }

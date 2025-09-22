@@ -1,6 +1,4 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
@@ -9,7 +7,7 @@ import { Container, Typography, Box, Grid } from "@mui/material";
 function Vision() {
   return (
     <div>
-      <Navbar />
+ 
       <section
         style={{
           color: "white",
@@ -62,49 +60,53 @@ function Vision() {
           </Typography>
         </Container>
       </section>
-      <section className="our-vision-content" style={{ padding: "2rem" }}>
-        <Container>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start", // align text at the top
-              justifyContent: "flex-start",
-              gap: "2rem", // space between title and paragraph
-              flexWrap: "wrap", // stack on small screens
-            }}
-          >
-            {/* Left: Our Vision */}
-            <Typography
-              variant="h4"
-              gutterBottom
-              sx={{
-                fontWeight: "bold",
-                textAlign: "left",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Our Vision
-            </Typography>
+     <section
+  className="our-vision-content"
+  style={{ padding: "2rem", marginTop: "4rem" }} // added margin-top
+>
+  <Container>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center", // center "Our Vision" vertically
+        justifyContent: "flex-start",
+        gap: "2rem",
+        flexWrap: "wrap", // stack on small screens
+      }}
+    >
+      {/* Left: Our Vision */}
+      <Typography
+        variant="h4"
+        gutterBottom
+        sx={{
+          fontWeight: "bold",
+          textAlign: "left",
+          whiteSpace: "nowrap",
+        }}
+      >
+        Our Vision
+      </Typography>
 
-            {/* Right: Paragraph */}
-            <Typography
-              variant="body1"
-              paragraph
-              sx={{ textAlign: "left", maxWidth: "700px" }}
-            >
-              The Active Church was birthed in 2004 in our home when God called
-              us very specifically to reach a nation by reaching the forgotten.
-              The calling was affirmed and we went from helping churches build
-              youth groups to starting a church that was youth oriented. We have
-              had the privilege since the birth of this vision of seeing the
-              youth grow into adults who have overcome the challenges of their
-              youth and situations and are now married with children of their
-              own who are planted and flourishing in their lives. The upliftment
-              of lives has always made us so grateful for the calling.
-            </Typography>
-          </div>
-        </Container>
-      </section>
+      {/* Right: Paragraph */}
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ textAlign: "left", maxWidth: "700px" }}
+      >
+        The Active Church was birthed in 2004 in our home when God called us
+        very specifically to reach a nation by reaching the forgotten. The
+        calling was affirmed and we went from helping churches build youth
+        groups to starting a church that was youth oriented. We have had the
+        privilege since the birth of this vision of seeing the youth grow into
+        adults who have overcome the challenges of their youth and situations
+        and are now married with children of their own who are planted and
+        flourishing in their lives. The upliftment of lives has always made us
+        so grateful for the calling.
+      </Typography>
+    </div>
+  </Container>
+</section>
+
 
       <section style={{ padding: "2rem 0" }}>
         <Container>
@@ -534,8 +536,6 @@ function Vision() {
   </div>
 </Box>
 
-
-      <Footer />
     </div>
   );
 }

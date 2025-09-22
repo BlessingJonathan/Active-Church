@@ -1,8 +1,4 @@
-import { Link } from "react-router-dom";
-import React from "react";
-import "./HomePage.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import HeroCollage from '../assets/WhatsApp Image 2025-09-10 at 11.54.50_ef357714.jpg';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
@@ -86,7 +82,6 @@ const HomePage = () => {
         <a href="#" className="contact-btn">Contact Us</a>
       </section>
 
-  <Footer />
     </div>
   );
 };

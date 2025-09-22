@@ -6,13 +6,14 @@ import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
 import Vision from "./pages/Vision"
 import Contact_Us from './pages/Contact_Us'
-
-
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 function App() {
 
   return (
 
     <>
+    <Navbar/>
       <Routes>
         <Route
           path='/'
@@ -43,6 +44,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </>
   )
 }
