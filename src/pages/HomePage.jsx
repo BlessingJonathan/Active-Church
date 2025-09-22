@@ -3,7 +3,7 @@ import HeroCollage from '../assets/WhatsApp Image 2025-09-10 at 11.54.50_ef35771
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import GroupIcon from '@mui/icons-material/Group';
-
+import './HomePage.css'
 
 const HomePage = () => {
   return (
