@@ -1,0 +1,182 @@
+/* Make page width responsive */
+.responsive-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .responsive-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .responsive-container {
+    width: 67%;
+  }
+}
+
+/* Hero Section */
+.vision-hero {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 5%;
+  padding: 4%;
+}
+.vision-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Text Row */
+.vision-text-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Vision Rows */
+.vision-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.vision-row.reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.vision-img {
+  width: 40%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+  .vision-img {
+    width: 100%;
+  }
+}
+
+.vision-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.vision-heading {
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-family: "Inter", sans-serif;
+}
+
+/* Beliefs Section */
+.beliefs-section {
+  position: relative;
+  padding: 4rem 0;
+  background-image: url("../assets/img4.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.beliefs-section .overlay-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+.beliefs-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: black;
+}
+.belief-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+}
+.icon-wrapper {
+  background-color: black;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.belief-title {
+  font-weight: bold;
+  color: black;
+}
+.belief-text {
+  color: black;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Leadership Section */
+.leadership-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.leadership-section {
+  position: relative;
+  margin: 0;
+  background-image: url("../assets/Group 105.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leadership-top {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  text-align: center;
+  z-index: 3;
+}
+.leadership-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+  z-index: 3;
+}

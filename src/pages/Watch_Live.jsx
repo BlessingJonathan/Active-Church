@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './Watch_Live.css'
 import { Link } from 'react-router-dom';
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 function Watch_Live() {
     const targetDate = new Date('2025-09-12T10:00:00');
     const [timeLeft, setTimeLeft] = useState({
@@ -34,6 +35,7 @@ function Watch_Live() {
 
     return (
         <>
+        <Navbar/>
             <div className="bannerOne">
                 <h1>Watch Live</h1>
                 <br />
@@ -162,6 +164,7 @@ function Watch_Live() {
                     </div>
                 </section>
             </div>
+            <Footer/>
         </>
     )
 }

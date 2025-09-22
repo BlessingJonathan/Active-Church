@@ -48,7 +48,7 @@ body, html, #root, .App {
 
 /* Banner/Hero */
 .banner {
-  width: 100vw;
+  width: 100%;
   min-height: 720px;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png') right/cover no-repeat;
   display: flex;
@@ -64,7 +64,6 @@ body, html, #root, .App {
 
 .hero-left {
   flex: 0 0 58%;
-  
   margin-right: 10%;
   padding: 88px 0 88px 72px;
   color: #fff;
@@ -75,9 +74,18 @@ body, html, #root, .App {
   font-weight: 900;
   margin: 4px 0 18px 0;
   line-height: 1.02;
+
+  overflow: visible;       /* show full text, prevent cutting */
+  white-space: normal;     /* allow wrapping if needed */
+  text-overflow: unset;    /* remove ellipsis */
 }
+
 .hero-left h1 span {
-  display: block;
+  display: block;          /* keep on its own line */
+  
+  overflow: visible;       /* ensure fully visible */
+  white-space: normal;     /* allow wrapping */
+  text-overflow: unset;    /* remove ellipsis */
 }
 .hero-left p {
   font-size: 1.15rem;
@@ -148,7 +156,7 @@ body, html, #root, .App {
 }
 
 .welcome-section {
-  width: 100vw;
+  width: 100%;
   background: 
     linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
     url('../assets/section1.png') center/cover no-repeat;
@@ -161,7 +169,6 @@ body, html, #root, .App {
   content: '';
   position: absolute;
   inset: 0;
- /* background: rgba(255,255,255,0.86);*/
   pointer-events: none;
 }
 .welcome-title {
@@ -307,7 +314,7 @@ body, html, #root, .App {
   color: #fff;
   padding: 48px 0 0 0;
   text-align: left;
-  width: 100vw;
+  width: 100%;
 }
 .footer-content {
   display: flex;
@@ -369,6 +376,24 @@ hr {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+  /* Fix wide laptop gaps at ~67–80% zoom */
+  .banner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .hero-right .hero-collage {
+    max-width: 55vw;
+    margin-right: 20%;
+  }
+  .pillars-container {
+    gap: 120px;
+  }
+  .events-container {
+    gap: 48px;
+  }
+}
+
 @media (max-width: 900px) {
   .navbar {
     padding: 24px 16px 0 16px;

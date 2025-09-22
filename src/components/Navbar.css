@@ -4,31 +4,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 56px;
+  padding: 16px 24px; /* reduced padding */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  height: 72px;
+  height: 80px; /* increased height to fit logo */
+  box-sizing: border-box; /* ensures padding doesn’t overflow */
+  overflow: hidden; /* just in case */
 }
+.logo{
+  flex-shrink: 0; /* prevent shrinking */
+  height: 65px;
+  /* margin-top: 5px; */
+}
+
 .logo img {
-  height: 48px;
+  height: 56px; /* adjust so it fits nicely */
+  display: block;
 }
+
 .nav-links {
   display: flex;
-  gap: 44px;
+  gap: 24px; /* reduced gap */
   align-items: center;
-}
-.nav-links a {
-  color: #111;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.15s ease;
-}
-.nav-links a:hover {
-  color: #007bff;
 }
