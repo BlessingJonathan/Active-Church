@@ -238,225 +238,218 @@ function Vision() {
           </Typography>
 
           {/* Cards Grid */}
-          <Grid container spacing={4}>
-            {/* Card 1 */}
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                  borderRadius: "20px",
-                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-                  height: "100%", // consistent height
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  padding: "1.5rem",
-                  backdropFilter: "blur(12px)",
-                }}
-              >
-                {/* Row: Icon + Title */}
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Box
-                    sx={{
-                      backgroundColor: "black",
-                      borderRadius: "50%",
-                      width: 70,
-                      height: 70,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginRight: "1rem",
-                    }}
-                  >
-                    <ImportContactsIcon
-                      sx={{ color: "red", fontSize: "36px" }}
-                    />
-                  </Box>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: "bold", color: "black" }}
-                  >
-                    Scripture
-                  </Typography>
-                </Box>
+          <Grid
+  container
+  spacing={4}
+  justifyContent="center"
+  alignItems="stretch"
+  sx={{ textAlign: "center" }}
+>
+  {/* Card 1 */}
+  <Grid item xs={12} sm={6} md={5} lg={4}>
+    <Box
+      sx={{
+        backgroundColor: "rgba(255,255,255,0.2)",
+        borderRadius: "20px",
+        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        padding: "1.5rem",
+        backdropFilter: "blur(12px)",
+        margin: "0 auto",
+        maxWidth: "400px",
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            backgroundColor: "black",
+            borderRadius: "50%",
+            width: 70,
+            height: 70,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: "1rem",
+          }}
+        >
+          <ImportContactsIcon sx={{ color: "red", fontSize: "36px" }} />
+        </Box>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+          Scripture
+        </Typography>
+      </Box>
 
-                {/* Description directly under icon */}
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "black",
-                    lineHeight: 1.6,
-                    marginTop: "0.75rem",
-                    textAlign: "left", // makes text flow naturally
-                  }}
-                >
-                  The Bible is God’s inspired Word and our guide for life.
-                </Typography>
-              </Box>
-            </Grid>
+      <Typography
+        variant="body1"
+        sx={{
+          color: "black",
+          lineHeight: 1.6,
+          marginTop: "0.75rem",
+          textAlign: "left",
+        }}
+      >
+        The Bible is God’s inspired Word and our guide for life.
+      </Typography>
+    </Box>
+  </Grid>
 
-            {/* Card 2 */}
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                  borderRadius: "20px",
-                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  padding: "1.5rem",
-                  backdropFilter: "blur(12px)",
-                }}
-              >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Box
-                    sx={{
-                      backgroundColor: "black",
-                      borderRadius: "50%",
-                      width: 70,
-                      height: 70,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginRight: "1rem",
-                    }}
-                  >
-                    <FavoriteBorderOutlinedIcon
-                      sx={{ color: "red", fontSize: "36px" }}
-                    />
-                  </Box>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: "bold", color: "black" }}
-                  >
-                    Salvation
-                  </Typography>
-                </Box>
+  {/* Card 2 */}
+  <Grid item xs={12} sm={6} md={5} lg={4}>
+    <Box
+      sx={{
+        backgroundColor: "rgba(255,255,255,0.2)",
+        borderRadius: "20px",
+        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        padding: "1.5rem",
+        backdropFilter: "blur(12px)",
+        margin: "0 auto",
+        maxWidth: "400px",
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            backgroundColor: "black",
+            borderRadius: "50%",
+            width: 70,
+            height: 70,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: "1rem",
+          }}
+        >
+          <FavoriteBorderOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
+        </Box>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+          Salvation
+        </Typography>
+      </Box>
 
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "black",
-                    lineHeight: 1.6,
-                    marginTop: "0.75rem",
-                    textAlign: "left",
-                  }}
-                >
-                  Salvation is by grace through faith in Jesus alone.
-                </Typography>
-              </Box>
-            </Grid>
+      <Typography
+        variant="body1"
+        sx={{
+          color: "black",
+          lineHeight: 1.6,
+          marginTop: "0.75rem",
+          textAlign: "left",
+        }}
+      >
+        Salvation is by grace through faith in Jesus alone.
+      </Typography>
+    </Box>
+  </Grid>
 
-            {/* Card 3 */}
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                  borderRadius: "20px",
-                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  padding: "1.5rem",
-                  backdropFilter: "blur(12px)",
-                }}
-              >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Box
-                    sx={{
-                      backgroundColor: "black",
-                      borderRadius: "50%",
-                      width: 70,
-                      height: 70,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginRight: "1rem",
-                    }}
-                  >
-                    <PeopleAltOutlinedIcon
-                      sx={{ color: "red", fontSize: "36px" }}
-                    />
-                  </Box>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: "bold", color: "black" }}
-                  >
-                    Community
-                  </Typography>
-                </Box>
+  {/* Card 3 */}
+  <Grid item xs={12} sm={6} md={5} lg={4}>
+    <Box
+      sx={{
+        backgroundColor: "rgba(255,255,255,0.2)",
+        borderRadius: "20px",
+        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        padding: "1.5rem",
+        backdropFilter: "blur(12px)",
+        margin: "0 auto",
+        maxWidth: "400px",
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            backgroundColor: "black",
+            borderRadius: "50%",
+            width: 70,
+            height: 70,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: "1rem",
+          }}
+        >
+          <PeopleAltOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
+        </Box>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+          Community
+        </Typography>
+      </Box>
 
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "black",
-                    lineHeight: 1.6,
-                    marginTop: "0.75rem",
-                    textAlign: "left",
-                  }}
-                >
-                  We value fellowship and supporting one another in faith.
-                </Typography>
-              </Box>
-            </Grid>
+      <Typography
+        variant="body1"
+        sx={{
+          color: "black",
+          lineHeight: 1.6,
+          marginTop: "0.75rem",
+          textAlign: "left",
+        }}
+      >
+        We value fellowship and supporting one another in faith.
+      </Typography>
+    </Box>
+  </Grid>
 
-            {/* Card 4 */}
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                  borderRadius: "20px",
-                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  padding: "1.5rem",
-                  backdropFilter: "blur(12px)",
-                }}
-              >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Box
-                    sx={{
-                      backgroundColor: "black",
-                      borderRadius: "50%",
-                      width: 70,
-                      height: 70,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginRight: "1rem",
-                    }}
-                  >
-                    <LanguageOutlinedIcon
-                      sx={{ color: "red", fontSize: "36px" }}
-                    />
-                  </Box>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: "bold", color: "black" }}
-                  >
-                    Mission
-                  </Typography>
-                </Box>
+  {/* Card 4 */}
+  <Grid item xs={12} sm={6} md={5} lg={4}>
+    <Box
+      sx={{
+        backgroundColor: "rgba(255,255,255,0.2)",
+        borderRadius: "20px",
+        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        padding: "1.5rem",
+        backdropFilter: "blur(12px)",
+        margin: "0 auto",
+        maxWidth: "400px",
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            backgroundColor: "black",
+            borderRadius: "50%",
+            width: 70,
+            height: 70,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: "1rem",
+          }}
+        >
+          <LanguageOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
+        </Box>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+          Mission
+        </Typography>
+      </Box>
 
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "black",
-                    lineHeight: 1.6,
-                    marginTop: "0.75rem",
-                    textAlign: "left",
-                  }}
-                >
-                  We’re called to make disciples locally and globally.
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
+      <Typography
+        variant="body1"
+        sx={{
+          color: "black",
+          lineHeight: 1.6,
+          marginTop: "0.75rem",
+          textAlign: "left",
+        }}
+      >
+        We’re called to make disciples locally and globally.
+      </Typography>
+    </Box>
+  </Grid>
+</Grid>
+
         </Container>
       </section>
       {/* Meet Our Leadership Section */}
