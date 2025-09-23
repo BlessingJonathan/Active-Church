@@ -7,6 +7,8 @@ import { Container, Typography, Box, Grid } from "@mui/material";
 import Children from "../assets/kidschurch.jpg";
 import Youth from "../assets/youth.jpg";
 import Banner from "../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png"
+import WhatWeBelieve from "../assets/img4.jpeg"
+import PastorCollage from "../assets/Group 105.png"
 function Vision() {
   return (
     <div>
@@ -214,7 +216,7 @@ function Vision() {
         style={{
           position: "relative",
           padding: "4rem 0",
-          backgroundImage: "url('src/assets/img4.jpeg')", // Change this path
+          backgroundImage: `url(${WhatWeBelieve})`, // Change this path
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -492,7 +494,7 @@ function Vision() {
       style={{
         position: "relative",
         margin: 0,
-        backgroundImage: "url('src/assets/Group 105.png')",
+        backgroundImage: `url(${PastorCollage})`,
         backgroundSize: "contain", // keeps it filled
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
