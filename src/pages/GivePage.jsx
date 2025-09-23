@@ -17,6 +17,7 @@ import Hero from "../assets/SnapInsta.to_504361137_18326229442205809_12073283822
 const GivePage = () => {
   const textFieldStyle = {
     "& .MuiOutlinedInput-root": {
+      overflow: "hidden",
       backgroundColor: "white",
       borderRadius: "12px",
       boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
@@ -40,7 +41,7 @@ const GivePage = () => {
           alignItems: "center",
           textAlign: "center",
           backgroundImage:
-            {Hero},
+            `url(${Hero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -323,7 +324,7 @@ const GivePage = () => {
             padding: "5% 3%",
             boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
             maxWidth: "80%",
-            backgroundImage: {BankDetails},
+            backgroundImage: `url(${BankDetails})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             mt: 8,
@@ -576,6 +577,7 @@ const GivePage = () => {
                     backgroundColor: "transparent",
                     color: "white",
                     border: "1px solid white",
+                    overflow: "hidden",
                   }}
                 >
                   Submit
@@ -591,7 +593,7 @@ const GivePage = () => {
         style={{
           position: "relative",
           backgroundImage:
-            {WhyWeGivepic},
+            `url(${WhyWeGivepic})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "80px 20px",

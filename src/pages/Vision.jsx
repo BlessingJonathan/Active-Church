@@ -19,7 +19,7 @@ function Vision() {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          backgroundImage:{Banner},
+          backgroundImage:`url(${Banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -143,6 +143,7 @@ function Vision() {
                   mb: 2,
                   fontStyle: "italic",
                   fontFamily: "'Inter', 'sans-serif'",
+                  overflow:"hidden"
                 }}
               >
                 Active Children's Church
@@ -167,21 +168,32 @@ function Vision() {
             }}
           >
             {/* Text */}
-            <Box sx={{ flex: 1, maxWidth: "600px" }}>
-              <Typography
-                variant="h4"
-                sx={{ mb: 2, fontStyle: "italic", fontFamily: "'Inter-sans" }}
-              >
-                Active Youth
-              </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
-                Active Youth is about young people who are passionate about
-                Christ. It’s about youth who are winning in their lives and
-                pursuing a relationship with their Saviour as they change the
-                world around them. Enjoy a great variety of entertaining
-                evenings mixed with the power of the Word.
-              </Typography>
-            </Box>
+            <Box sx={{ flex: 1, maxWidth: "600px", overflow: "hidden" }}>
+  <Typography
+    variant="h4"
+    sx={{
+      mb: 2,
+      fontStyle: "italic",
+      fontFamily: "Inter, sans-serif", // ✅ fixed
+      overflow: "hidden",
+      whiteSpace: "nowrap", // ✅ prevents accidental wrapping
+      textOverflow: "ellipsis", // ✅ cuts off long text instead of scrollbar
+    }}
+  >
+    Active Youth
+  </Typography>
+  <Typography
+    variant="body1"
+    sx={{ lineHeight: 1.6, overflow: "hidden" }}
+  >
+    Active Youth is about young people who are passionate about Christ. 
+    It’s about youth who are winning in their lives and pursuing a 
+    relationship with their Saviour as they change the world around them. 
+    Enjoy a great variety of entertaining evenings mixed with the power 
+    of the Word.
+  </Typography>
+</Box>
+
             {/* Image */}
             <Box
               component="img"

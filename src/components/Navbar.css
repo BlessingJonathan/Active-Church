@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 16px 24px; /* spacing inside navbar */
   position: fixed;
   top: 0;
   left: 0;
@@ -12,6 +12,7 @@
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
   height: 80px;
   box-sizing: border-box;
+  overflow: hidden; /* prevent scrollbars */
 }
 
 .logo {
@@ -20,8 +21,10 @@
 }
 
 .logo img {
-  height: 56px;
+  height: 100%; /* fills logo container */
+  width: auto; /* keeps aspect ratio */
   display: block;
+  object-fit: contain; /* ensures whole logo fits */
 }
 
 .nav-links {
@@ -30,11 +33,14 @@
   align-items: center;
 }
 
-.nav-links span:hover {
-  color: red;
+.nav-links span {
+  font-weight: bold; /* ✅ bold links */
+  cursor: pointer;
+  text-decoration: none;
+  color: #000; /* default text color */
+  transition: color 0.3s ease;
 }
 
-.active-nav {
-  color: red;
-  font-weight: bold;
+.nav-links span:hover {
+  color: #75f6ff; /* nice red hover (you can change this) */
 }
