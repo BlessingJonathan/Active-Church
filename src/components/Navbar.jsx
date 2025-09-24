@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import ActiveLogo from "../assets/Vector.png";
-import './Navbar.css';
+import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
     { label: "OUR VISION", path: "/ourvision" },
@@ -14,24 +15,41 @@ const Navbar = () => {
     { label: "CONTACT US", path: "/contactus" },
   ];
 
+  const handleNavClick = (path) => {
+    navigate(path);
+    setMenuOpen(false); // close menu on link click
+  };
+
   return (
     <header className="navbar">
       <div className="logo" onClick={() => navigate("/")}>
-        <img src={ActiveLogo} alt="The Active Church Logo" style={{ cursor: "pointer" }} />
+        <img
+          src={ActiveLogo}
+          alt="The Active Church Logo"
+          style={{ cursor: "pointer" }}
+        />
       </div>
 
-      <nav className="nav-links">
+      <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
         {navItems.map((item) => (
           <span
             key={item.path}
-            onClick={() => navigate(item.path)}
+            onClick={() => handleNavClick(item.path)}
             className={location.pathname === item.path ? "active-nav" : ""}
-            style={{ fontWeight: "bold", cursor: "pointer" }}
           >
             {item.label}
           </span>
         ))}
       </nav>
+
+      <div
+        className={`hamburger ${menuOpen ? "open" : ""}`}
+        onClick={() => setMenuOpen((prev) => !prev)}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
   );
 };

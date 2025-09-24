@@ -9,6 +9,7 @@ import Youth from "../assets/youth.jpg";
 import Banner from "../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png"
 import WhatWeBelieve from "../assets/img4.jpeg"
 import PastorCollage from "../assets/Group 105.png"
+import "./Vision.css";
 function Vision() {
   return (
     <div>

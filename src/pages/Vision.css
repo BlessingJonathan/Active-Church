@@ -1,0 +1,138 @@
+/* vision.mobile.css */
+
+/* --- Global Mobile Reset --- */
+@media (max-width: 768px) {
+  /* === HERO SECTION === */
+  section[style*="backgroundImage"] {
+    padding: 2rem 1rem !important;
+  }
+
+  section[style*="backgroundImage"] h3,
+  section[style*="backgroundImage"] h6 {
+    font-size: 1.8rem !important;
+    line-height: 1.3;
+    padding: 0 1rem;
+  }
+
+  section[style*="backgroundImage"] h6 {
+    font-size: 1rem !important;
+    max-width: 90% !important;
+  }
+
+  /* === Our Vision Text Section === */
+  .our-vision-content {
+    padding: 1rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .our-vision-content h4 {
+    font-size: 1.6rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .our-vision-content p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  /* === IMAGE + TEXT ROWS === */
+  section img {
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  section h4 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  section p {
+    text-align: center !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* === What We Believe === */
+  section[style*="WhatWeBelieve"] h3 {
+    font-size: 2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  section[style*="WhatWeBelieve"] p {
+    font-size: 1rem !important;
+    padding: 0 1rem;
+  }
+
+  .MuiGrid-item {
+    width: 100% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
+  }
+
+  .MuiBox-root {
+    padding: 1rem !important;
+  }
+
+  /* === Leadership Section === */
+  section[style*="PastorCollage"] {
+    background-size: cover !important;
+    min-height: 60vh !important;
+  }
+
+  section[style*="PastorCollage"] h4 {
+    font-size: 1.6rem !important;
+  }
+
+  section[style*="PastorCollage"] h5 {
+    font-size: 1.2rem !important;
+  }
+
+  section[style*="PastorCollage"] div[style*="bottom"] {
+    bottom: 2rem !important;
+    transform: translate(-50%, 0) !important;
+  }
+
+  /* Reduce padding globally */
+  section {
+    padding: 1.5rem 1rem !important;
+  }
+}
+
+/* --- Extra Small Phones (≤480px) --- */
+@media (max-width: 480px) {
+  /* Make titles smaller */
+  h3, h4, h5 {
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Prevent horizontal scroll */
+  section,
+  .our-vision-content,
+  .MuiGrid-item {
+    padding: 1rem 0.5rem !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  /* Leadership overlay text tweaks */
+  section[style*="PastorCollage"] h4 {
+    font-size: 1.3rem !important;
+  }
+
+  section[style*="PastorCollage"] h5 {
+    font-size: 1rem !important;
+  }
+
+  /* Stack content tighter */
+  section img {
+    margin-bottom: 1rem !important;
+  }
+}

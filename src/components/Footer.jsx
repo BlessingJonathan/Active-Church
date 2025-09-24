@@ -4,7 +4,9 @@ import FooterLogo from '../assets/Vector.png';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { Stack } from '@mui/material';
 const Footer = () => {
   return (
     <footer className="site-footer">
@@ -37,9 +39,14 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-column">
-          <h4>Contact</h4>
-          <p>72 Marlborough Road, Springfield</p>
-          <p>info@theactivechurch.org</p>
+         <Stack direction="row" alignItems="center" spacing={1}>
+            <LocationOnOutlinedIcon fontSize="small" />
+            <span>72 Marlborough Road, Springfield</span>
+          </Stack>
+          <Stack direction="row" alignItems="center" spacing={1}>
+            <EmailOutlinedIcon fontSize="small" />
+            <span>info@theactivechurch.org</span>
+          </Stack>
         </div>
       </div>
       <hr />
