@@ -3,7 +3,7 @@ import './Watch_Live.css'
 import { Link } from 'react-router-dom';
 
 function Watch_Live() {
-    const targetDate = new Date('2025-09-12T10:00:00');
+    const targetDate = new Date('2025-09-28T10:00:00');
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
@@ -34,6 +34,7 @@ function Watch_Live() {
 
     return (
         <>
+
             <div className="bannerOne">
                 <h1>Watch Live</h1>
                 <br />
@@ -110,15 +111,49 @@ function Watch_Live() {
                             <h3>Friday youth Service</h3>
                             <p>Join us for Youth Service</p>
                             <br />
-                            <p>This Friday</p>
-                            <p>6:00 PM</p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="#000" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z" />
+                                </svg>
+                                <span>
+
+                                This Friday
+                                </span>
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path fill="#000" d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7s7 3.14 7 7s-3.14 7-7 7M8 2C4.69 2 2 4.69 2 8s2.69 6 6 6s6-2.69 6-6s-2.69-6-6-6" />
+                                    <path fill="#000" d="M10 10.5c-.09 0-.18-.02-.26-.07l-2.5-1.5A.5.5 0 0 1 7 8.5v-4c0-.28.22-.5.5-.5s.5.22.5.5v3.72l2.26 1.35a.502.502 0 0 1-.26.93" />
+                                </svg>
+                                <span>
+
+                                6:00 PM
+                                </span>
+                            </p>
                         </div>
                         <div className="serv-blk Sunday">
                             <h3>Sunday Service</h3>
                             <p>Deep dive into God's word</p>
                             <br />
-                            <p>This Sunday</p>
-                            <p>9:00 PM</p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="#000" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z" />
+                                </svg>
+                                <span>
+
+                                This Sunday
+                                </span>
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path fill="#000" d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7s7 3.14 7 7s-3.14 7-7 7M8 2C4.69 2 2 4.69 2 8s2.69 6 6 6s6-2.69 6-6s-2.69-6-6-6" />
+                                    <path fill="#000" d="M10 10.5c-.09 0-.18-.02-.26-.07l-2.5-1.5A.5.5 0 0 1 7 8.5v-4c0-.28.22-.5.5-.5s.5.22.5.5v3.72l2.26 1.35a.502.502 0 0 1-.26.93" />
+                                </svg>
+                                <span>
+
+                                9:00 PM
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -162,6 +197,7 @@ function Watch_Live() {
                     </div>
                 </section>
             </div>
+ 
         </>
     )
 }

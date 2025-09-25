@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import { Routes, Route } from 'react-router-dom'
 import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
-import Contact_Us from './Pages/Contact_Us'
+import Contact_Us from './Pages/Contact_Us/Contact_Us'
 
 
 function App() {
@@ -12,6 +12,8 @@ function App() {
   return (
 
     <>
+  
+    <Navbar/>
       <Routes>
         <Route
           path='/'
@@ -30,11 +32,20 @@ function App() {
             <Watch_Live />
           }
         />
-        <Route
-        path='contact-us'
-        element = {<Contact_Us/>} 
+         <Route
+          path='/ourvision'
+          element={
+            <Vision />
+          }
+        /> <Route
+          path='/contactus'
+          element={
+            <Contact_Us />
+          }
         />
       </Routes>
+      <Footer/>
+     
     </>
   )
 }

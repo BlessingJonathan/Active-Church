@@ -9,46 +9,9 @@ body, html, #root, .App {
   overflow-x: visible;
 }
 
-/* Navbar */
-.navbar {
-  width: 100%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 56px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  height: 72px;
-}
-.logo img {
-  height: 48px;
-}
-.nav-links {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  margin-right: 100px;
-}
-.nav-links a {
-  color: #111;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.15s ease;
-}
-.nav-links a:hover {
-  color: #007bff;
-}
-
 /* Banner/Hero */
 .banner {
-  width: 100vw;
+  width: 100%;
   min-height: 720px;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png') right/cover no-repeat;
   display: flex;
@@ -61,10 +24,26 @@ body, html, #root, .App {
   padding-left: 64px;
   padding-right: 64px;
 }
+.hero-right {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 32px;
+  z-index: 30;
+}
 
+.hero-collage {
+  width: 100%;
+  max-width: 800px; /* increase max width */
+  height: auto;
+  object-fit: cover; /* fill the container more visually */
+  border-radius: 12px;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.6);
+  transform: translateX(28px) translateY(6px);
+}
 .hero-left {
   flex: 0 0 58%;
-  
   margin-right: 10%;
   padding: 88px 0 88px 72px;
   color: #fff;
@@ -75,9 +54,18 @@ body, html, #root, .App {
   font-weight: 900;
   margin: 4px 0 18px 0;
   line-height: 1.02;
+
+  overflow: visible;       /* show full text, prevent cutting */
+  white-space: normal;     /* allow wrapping if needed */
+  text-overflow: unset;    /* remove ellipsis */
 }
+
 .hero-left h1 span {
-  display: block;
+  display: block;          /* keep on its own line */
+  
+  overflow: visible;       /* ensure fully visible */
+  white-space: normal;     /* allow wrapping */
+  text-overflow: unset;    /* remove ellipsis */
 }
 .hero-left p {
   font-size: 1.15rem;
@@ -148,7 +136,7 @@ body, html, #root, .App {
 }
 
 .welcome-section {
-  width: 100vw;
+  width: 100%;
   background: 
     linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
     url('../assets/section1.png') center/cover no-repeat;
@@ -161,7 +149,6 @@ body, html, #root, .App {
   content: '';
   position: absolute;
   inset: 0;
- /* background: rgba(255,255,255,0.86);*/
   pointer-events: none;
 }
 .welcome-title {
@@ -259,15 +246,11 @@ body, html, #root, .App {
 }
 .detail-text {
   font-size: 1rem;
-  color: #222;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.icon i {
-  color: #007bff;
-  font-size: 1.1rem;
-}
+
 
 /* CTA Section */
 .cta-section {
@@ -307,7 +290,7 @@ body, html, #root, .App {
   color: #fff;
   padding: 48px 0 0 0;
   text-align: left;
-  width: 100vw;
+  width: 100%;
 }
 .footer-content {
   display: flex;
@@ -369,6 +352,24 @@ hr {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+  /* Fix wide laptop gaps at ~67–80% zoom */
+  .banner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .hero-right .hero-collage {
+    max-width: 55vw;
+    margin-right: 20%;
+  }
+  .pillars-container {
+    gap: 120px;
+  }
+  .events-container {
+    gap: 48px;
+  }
+}
+
 @media (max-width: 900px) {
   .navbar {
     padding: 24px 16px 0 16px;
@@ -398,6 +399,15 @@ hr {
     gap: 32px;
     align-items: flex-start;
     padding: 0 16px;
+  }
+   .hero-right {
+    flex: 0 0 100%;
+    padding-right: 0;
+    margin-top: 24px;
+  }
+  .hero-collage {
+    max-width: 90%; /* fill most of the screen on mobile */
+    transform: none;
   }
 }
 
@@ -433,6 +443,114 @@ hr {
   }
   .footer-content {
     padding: 0 8px;
+  }
+}
+
+/* Extra Small Devices (phones ≤ 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 6px 0 6px;
+    height: auto;
+  }
+  .logo img {
+    height: 36px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 0;
+    font-size: 0.85rem;
+  }
+    .hero-collage {
+    max-width: 90%; /* almost full width on small screens */
+  }
+
+  .banner {
+    min-height: 400px;
+    padding: 40px 12px 20px 12px;
+    text-align: center;
+  }
+  .hero-left {
+    padding: 40px 12px;
+    margin-right: 0;
+  }
+  .hero-left h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+  .hero-right .hero-collage {
+    width: 90%;
+    max-width: 320px;
+    margin: 20px auto 0 auto;
+    transform: none;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .pillars-container {
+    gap: 12px;
+  }
+  .pillar {
+    max-width: 160px;
+  }
+  .events-container {
+    gap: 16px;
+  }
+  .event-card {
+    padding: 16px;
+    width: 90%;
+  }
+  .cta-section {
+    padding: 40px 12px;
+  }
+  .cta-section h1 {
+    font-size: 1.5rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+  .contact-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ultra Small Devices (≤ 360px) */
+@media (max-width: 360px) {
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+  .hero-left p {
+    font-size: 0.85rem;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  .pillar-title {
+    font-size: 1rem;
+  }
+  .event-title {
+    font-size: 1rem;
+  }
+  .event-description,
+  .detail-text {
+    font-size: 0.9rem;
+  }
+  .footer-column h4 {
+    font-size: 1rem;
+  }
+  .footer-column ul li a {
+    font-size: 0.9rem;
   }
 }
 
