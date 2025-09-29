@@ -5,7 +5,8 @@ import { Routes, Route } from 'react-router-dom'
 import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
 import Contact_Us from './pages/Contact_Us'
-
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
 
