@@ -4,7 +4,10 @@ import HomePage from './pages/HomePage'
 import { Routes, Route } from 'react-router-dom'
 import GivePage from './pages/GivePage'
 import Watch_Live from './pages/Watch_Live'
-import Contact_Us from './Pages/Contact_Us/Contact_Us'
+import Contact_Us from './Pages/Contact_Us'
+import Navbar from './components/Navbar'
+import Vision from './Pages/Vision'
+import Footer from './components/Footer'
 
 
 function App() {
