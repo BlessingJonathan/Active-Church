@@ -9,11 +9,11 @@ import {
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import "./GivePage.css";
-import WhyWeGivepic from "../assets/SnapInsta.to_504484732_18326229409205809_958354511391319144_n.png"
+import WhyWeGivepic from "../assets/SnapInsta.to_504484732_18326229409205809_958354511391319144_n.png";
 import Payment from "../assets/qrcode.jpeg";
 import QRcode from "../assets/QR-code (1)(1).png";
 import BankDetails from "../assets/Frame 93.png";
-import Hero from "../assets/SnapInsta.to_504361137_18326229442205809_1207328382216318209_n.png"
+import Hero from "../assets/SnapInsta.to_504361137_18326229442205809_1207328382216318209_n.png";
 const GivePage = () => {
   const textFieldStyle = {
     "& .MuiOutlinedInput-root": {
@@ -40,13 +40,11 @@ const GivePage = () => {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          backgroundImage:
-            `url(${Hero})`,
+          backgroundImage: `url(${Hero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           position: "relative",
-          marginTop: "5%", // Add this line
           padding: "4%",
         }}
       >
@@ -592,12 +590,14 @@ const GivePage = () => {
       <section
         style={{
           position: "relative",
-          backgroundImage:
-            `url(${WhyWeGivepic})`,
+          backgroundImage: `url(${WhyWeGivepic})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "80px 20px",
           marginTop: "8%",
+          backdropFilter: "blur(1px)",
+          WebkitBackdropFilter: "blur(1px)",
+          backgroundColor: "rgba(255,255,255,0.35)",
         }}
       >
         <Typography
@@ -632,7 +632,6 @@ const GivePage = () => {
           our commitment to His kingdom.
         </Typography>
       </section>
-
     </div>
   );
 };

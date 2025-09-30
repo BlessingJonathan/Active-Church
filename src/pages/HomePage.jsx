@@ -21,13 +21,13 @@ const HomePage = () => {
             welcoming community as we grow in Christ and serve others.
           </p>
           <div className="hero-buttons">
-            <a href="#" className="btn primary">
+            <a href="/watchlive" className="btn primary">
               <span className="iconjoin">
                 <i className="fas fa-users"></i>
               </span>{" "}
               Join Our Services
             </a>
-            <a href="#" className="btn secondary">
+            <a href="/watchlive" className="btn secondary">
               Watch Live
             </a>
           </div>
