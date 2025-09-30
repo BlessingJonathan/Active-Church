@@ -24,8 +24,8 @@
 /* Desktop links */
 .nav-links.desktop {
   display: flex;
-  gap: 32px;
   margin-left: auto;
+  margin-right: 16px;
 }
 .nav-links span {
   font-weight: bold;
