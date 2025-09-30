@@ -98,6 +98,7 @@ const GivePage = () => {
           Choose the method that works best for you.
         </Typography>
         <Box
+          className='give-cards'
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
@@ -110,6 +111,7 @@ const GivePage = () => {
         >
           {/* Online Giving */}
           <Box
+            className='give-card'
             sx={{
               flex: 1,
               backgroundColor: "white",
@@ -213,6 +215,7 @@ const GivePage = () => {
           </Box>
           {/* In-Person Giving */}
           <Box
+            className='give-card'
             sx={{
               flex: 1,
               backgroundColor: "white",
