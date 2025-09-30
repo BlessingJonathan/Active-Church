@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import FooterLogo from '../assets/Vector.png';
+import FooterLogo from '../assets/Vector-1.png';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -27,29 +27,33 @@ const Footer = () => {
               <YouTubeIcon fontSize="large" />
             </a>
           </div>
-        
+
         </div>
         <div className="footer-column">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/vision">Our Vision</a></li>
-            <li><a href="/service">Service Times</a></li>
-            <li><a href="/give">Give Online</a></li>
-            <li><a href="/watchlive">Watch Live</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-         <Stack direction="row" alignItems="center" spacing={1}>
-            <LocationOnOutlinedIcon fontSize="small" />
-            <span>72 Marlborough Road, Springfield</span>
-          </Stack>
-          <Stack direction="row" alignItems="center" spacing={1}>
-            <EmailOutlinedIcon fontSize="small" />
-            <span>info@theactivechurch.org</span>
-          </Stack>
+
+          <div className="footer-column-2">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/vision">Our Vision</a></li>
+              <li><a href="/service">Service Times</a></li>
+              <li><a href="/give">Give Online</a></li>
+              <li><a href="/watchlive">Watch Live</a></li>
+            </ul>
+          </div>
+          <div className="footer-column-1">
+            <h4>Contact</h4>
+            <Stack className='address' direction="row" alignItems="center" spacing={1}>
+              <LocationOnOutlinedIcon fontSize="small" />
+              <span>72 Marlborough Road, Springfield</span>
+            </Stack>
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <EmailOutlinedIcon fontSize="small" />
+              <span>info@theactivechurch.org</span>
+            </Stack>
+          </div>
         </div>
       </div>
-      <hr />
+      <hr className='hr' />
       <p className="copyright">© 2025 The Active Church. All rights reserved.</p>
     </footer>
   );

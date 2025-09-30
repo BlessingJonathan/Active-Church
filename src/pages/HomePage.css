@@ -25,11 +25,12 @@ body, html, #root, .App {
   padding-right: 64px;
 }
 .hero-right {
+  /* border:1px solid red; */
   flex: 0 0 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 32px;
+  padding-right: 0px;
   z-index: 30;
 }
 
@@ -50,7 +51,7 @@ body, html, #root, .App {
   z-index: 2;
 }
 .hero-left h1 {
-  font-size: 5.4rem;
+  font-size: 5rem;
   font-weight: 900;
   margin: 4px 0 18px 0;
   line-height: 1.02;
@@ -74,7 +75,12 @@ body, html, #root, .App {
   max-width: 620px;
 }
 .hero-buttons {
+  /* border:1px solid red; */
+  height:4rem;
+  width:25rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 18px;
 }
 .btn {
@@ -139,7 +145,7 @@ body, html, #root, .App {
   width: 100%;
   background: 
     linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
-    url('../assets/section1.png') center/cover no-repeat;
+    url('../assets/welco.jpeg') center/cover no-repeat;
   padding: 64px 0 0 0;
   text-align: center;
   position: relative;
@@ -250,7 +256,6 @@ body, html, #root, .App {
   align-items: center;
   gap: 8px;
 }
-
 
 /* CTA Section */
 .cta-section {

@@ -57,7 +57,10 @@ const GivePage = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.4)",
+              backdropFilter: "blur(1px)",
+            WebkitBackdropFilter: "blur(1px)",
+            backgroundColor: "rgba(0, 0, 0, 0.35)",
+            zIndex: 0,
           }}
         ></div>
         <Container sx={{ position: "relative", zIndex: 1 }}>
@@ -370,16 +373,12 @@ const GivePage = () => {
                 src={Payment}
                 alt="Payment Options"
                 style={{
-                  maxWidth: "180px",
-                  maxHeight: "120px",
+                  maxWidth: "200px",
+                  maxHeight: "200px",
                   marginBottom: "16px",
                 }}
               />
-              <img
-                src={QRcode}
-                alt="QR Code"
-                style={{ maxWidth: "180px", maxHeight: "120px" }}
-              />
+              
             </Box>
           </Box>
           {/* Inline Bank Details and Form */}
@@ -592,14 +591,27 @@ const GivePage = () => {
       <section
         style={{
           position: "relative",
-          backgroundImage:
-            `url(${WhyWeGivepic})`,
+          backgroundImage: `url(${WhyWeGivepic})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "80px 20px",
           marginTop: "8%",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backdropFilter: "blur(5px)",
+            WebkitBackdropFilter: "blur(5px)",
+            backgroundColor: "rgba(255,255,255,0.35)",
+            zIndex: 0,
+          }}
+        ></div>
+        <div style={{ position: "relative", zIndex: 1 }}>
         <Typography
           variant="h4"
           align="center"
@@ -615,22 +627,28 @@ const GivePage = () => {
           gutterBottom
           sx={{ color: "red", fontStyle: "italic" }}
         >
-          "Each of you should give what you have decided in your heart to give,
-          not reluctantly or under compulsion, for God loves a cheerful giver."
+          "Each of you should give what you have decided in your heart to give,not 
+          <br />
+           reluctantly or under compulsion, for God loves a cheerful giver."
         </Typography>
         <Typography
           align="center"
           variant="subtitle1"
           gutterBottom
-          sx={{ color: "grey" }}
+          sx={{ color: "white" }}
         >
           2 Corinthians 9:7
         </Typography>
-        <Typography align="center" variant="body1" sx={{ color: "grey" }}>
+        <Typography align="center" variant="body1" sx={{ color: "white" }}>
           Giving is an act of worship and a way to participate in God's work in
-          the world. When we give, we express our trust in God's provision and
-          our commitment to His kingdom.
+          the 
+          <br />
+           world. When we give, we express our trust in God's provision and
+          our 
+          <br />
+          commitment to His kingdom.
         </Typography>
+        </div>
       </section>
 
     </div>
