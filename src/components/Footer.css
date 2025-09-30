@@ -1,6 +1,6 @@
 /* Footer Base */
 .site-footer {
-  background: black;
+  background: #1f1f1f;
   color: #fff;
   padding: 48px 0 24px 0;
   text-align: left;
@@ -8,36 +8,24 @@
 }
 
 .footer-content {
-  padding:0px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  /* border:1px solid red; */
-}
-
-.footer-column1{
-  /* flex: 1; */
-  /* border:1px solid red; */
-  width: 90px;
-  /* margin:20px;   */
-}
-
-.footer-column{
-  display: flex;
-  /* border: 1px solid red; */
-  height:11.7rem;
-  width:50%;
   justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-
-.footer-column-1 .address{
-  /* border:1px solid red; */
-  margin-bottom: 8px;
+.footer-column1,
+.footer-column {
+  flex: 1;
+  min-width: 180px;
 }
 
 .footer-logo {
-  height: 42px;
+  height: 32px;
   margin-bottom: 12px;
 }
 
@@ -88,12 +76,6 @@
 
 .footer-social a:hover {
   color: #ff0000;
-}
-
-.hr{
-  border: 1px solid white;
-  width:90%;
-  margin-left: 5%;
 }
 
 .copyright {
