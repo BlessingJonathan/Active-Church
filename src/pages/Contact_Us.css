@@ -199,15 +199,19 @@ button{
 /* ============================= */
 
 /* Tablets */
+/* Tablets */
 @media (max-width: 768px) {
-  .contact-container {
+  .contact-section {
     flex-direction: column;
     align-items: center;
+    padding: 40px 16px;
+    height: auto; /* let content grow naturally */
     gap: 40px;
   }
 
   .contact-blk {
     width: 100%;
+    height: auto;
     text-align: center;
   }
 
@@ -230,37 +234,86 @@ button{
   .social-icons {
     justify-content: center;
   }
+
+  .names-input {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    height: auto;
+  }
+
+  .names-input input {
+    width: 100%;
+  }
+
+  /* Move map below form */
+  .location {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+  }
 }
 
 /* Mobile Phones */
 @media (max-width: 480px) {
+  .hero-sect {
+    height: 30vh;
+    margin-top: 60px;
+    padding: 0 12px;
+  }
+
+  .hero-sect h1 {
+    font-size: 1.6rem;
+  }
+
   .contact-section {
-    padding: 60px 16px;
-  }
-
-  .contact-section h2 {
-    font-size: 1.8rem;
-  }
-
-  .contact-section p {
-    font-size: 1rem;
+    padding: 40px 12px;
   }
 
   .contact-blk h4 {
     font-size: 1.2rem;
   }
 
-  .inTouch-blk i {
-    font-size: 1.1rem;
-  }
-
-  .icon-text {
-    font-size: 0.95rem;
+  .icon-text p {
+    font-size: 0.9rem;
   }
 
   .social-blk {
     width: 42px;
     height: 42px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .location {
+    height: 200px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero-sect h1 {
+    font-size: 1.4rem;
+  }
+
+  .contact-section {
+    padding: 30px 8px;
+  }
+
+  .form {
+    padding: 10px;
+    box-shadow: none; /* reduce clutter */
+  }
+
+  .icon-text p {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    height: 28px;
+  }
+
+  .location {
+    height: 180px;
   }
 }
