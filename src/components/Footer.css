@@ -12,32 +12,27 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* border:1px solid red; */
 }
 
 .footer-column-1{
-  /* border:1px solid red; */
-  height:83%;
-  margin-top: 6.5px;
+ height:55%;
+ display: flex;
+ flex-direction: column;
+ margin-top: 5px;
+ justify-content: space-between;
+ padding:0px;
 }
 
 .footer-column-2{
-  /* border:1px solid red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height:83%;
-  margin-top:10px
-}
-
-.address{
-  /* border:1px solid red; */
-  margin-top: 2rem;
+ margin-top: 5px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ height:86%
 }
 
 .footer-column{
   display: flex;
-  /* border: 1px solid red; */
   height:11.7rem;
   width:50%;
   justify-content: space-between;
@@ -45,7 +40,6 @@
 
 
 .footer-column-1 .address{
-  /* border:1px solid red; */
   margin-bottom: 8px;
 }
 
@@ -100,7 +94,7 @@
 }
 
 .footer-social a:hover {
-  color: #ff0000;
+  cursor:pointer
 }
 
 .hr{
@@ -116,46 +110,74 @@
   margin: 16px 0 24px 0;
 }
 
-/* Tablet */
-@media (max-width: 900px) {
+/* Extra Small Phones (≤360px) */
+@media (max-width: 360px) {
   .footer-content {
-    flex-direction: column;
-    gap: 32px;
-    padding: 0 24px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-column1,
-  .footer-column {
-    min-width: unset;
-    width: 100%;
-  }
-
-  .footer-social {
-    justify-content: center;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .site-footer {
-    padding: 32px 0 16px 0;
+    gap: 24px;
+    padding: 0 16px;
   }
 
   .footer-column h4 {
-    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    font-size: 0.9rem;
   }
 
   .footer-column ul li a {
-    font-size: clamp(0.85rem, 4vw, 0.95rem);
+    font-size: 0.8rem;
   }
 
   .footer-social a {
-    font-size: clamp(0.9rem, 5vw, 1rem);
+    font-size: 0.85rem;
   }
 
   .copyright {
-    font-size: clamp(0.75rem, 4vw, 0.9rem);
+    font-size: 0.7rem;
+  }
+}
+
+/* Medium Tablets (≤768px) */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 20px;
+    gap: 28px;
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Standard Desktops (≥1024px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-column h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Large Desktops (≥1440px) */
+@media (min-width: 1440px) {
+  .footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .footer-column h4 {
+    font-size: 1.25rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 1.1rem;
+  }
+
+  .footer-social a {
+    font-size: 1.3rem;
   }
 }
