@@ -27,7 +27,7 @@ function Vision() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           position: "relative",
-          marginTop: "5%", // Add this line
+         
           padding: "4%",
         }}
       >

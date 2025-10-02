@@ -17,20 +17,18 @@ const Navbar = () => {
 
   const handleNavClick = (path) => {
     navigate(path);
-    setMenuOpen(false); // close menu on link click
+    setMenuOpen(false);
   };
 
   return (
     <header className="navbar">
+      {/* Logo */}
       <div className="logo" onClick={() => navigate("/")}>
-        <img
-          src={ActiveLogo}
-          alt="The Active Church Logo"
-          style={{ cursor: "pointer" }}
-        />
+        <img src={ActiveLogo} alt="The Active Church Logo" />
       </div>
 
-      <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+      {/* Desktop Links */}
+      <nav className="nav-links desktop">
         {navItems.map((item) => (
           <span
             key={item.path}
@@ -42,6 +40,7 @@ const Navbar = () => {
         ))}
       </nav>
 
+      {/* Hamburger */}
       <div
         className={`hamburger ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen((prev) => !prev)}
@@ -50,6 +49,21 @@ const Navbar = () => {
         <div></div>
         <div></div>
       </div>
+
+      {/* Overlay + Slide Panel */}
+      {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)} />}
+      <nav className={`mobile-panel ${menuOpen ? "active" : ""}`}>
+        <button className="close-btn" onClick={() => setMenuOpen(false)}>×</button>
+        {navItems.map((item) => (
+          <span
+            key={item.path}
+            onClick={() => handleNavClick(item.path)}
+            className={location.pathname === item.path ? "active-nav" : ""}
+          >
+            {item.label}
+          </span>
+        ))}
+      </nav>
     </header>
   );
 };
