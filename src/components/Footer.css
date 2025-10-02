@@ -15,11 +15,24 @@
   /* border:1px solid red; */
 }
 
-.footer-column1{
-  /* flex: 1; */
+.footer-column-1{
   /* border:1px solid red; */
-  width: 90px;
-  /* margin:20px;   */
+  height:83%;
+  margin-top: 6.5px;
+}
+
+.footer-column-2{
+  /* border:1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:83%;
+  margin-top:10px
+}
+
+.address{
+  /* border:1px solid red; */
+  margin-top: 2rem;
 }
 
 .footer-column{

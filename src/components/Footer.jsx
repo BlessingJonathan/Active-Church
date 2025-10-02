@@ -32,8 +32,8 @@ const Footer = () => {
         <div className="footer-column">
 
           <div className="footer-column-2">
-            <h4>Quick Links</h4>
-            <ul>
+            <h4 className='column-header'>Quick Links</h4>
+            <ul className='links'>
               <li><a href="/vision">Our Vision</a></li>
               <li><a href="/service">Service Times</a></li>
               <li><a href="/give">Give Online</a></li>
@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-column-1">
-            <h4>Contact</h4>
+            <h4 className='column-header' >Contact</h4>
             <Stack className='address' direction="row" alignItems="center" spacing={1}>
               <LocationOnOutlinedIcon fontSize="small" />
               <span>72 Marlborough Road, Springfield</span>
