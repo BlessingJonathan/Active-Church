@@ -8,7 +8,7 @@ import Children from "../assets/kidschurch.jpg";
 import Youth from "../assets/youth.jpg";
 import Banner from "../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png"
 import WhatWeBelieve from "../assets/img4.jpeg"
-import PastorCollage from "../assets/Group 105.png"
+import PastorCollage from "../assets/WhatsApp Image 2025-10-02 at 14.03.41_5afb2a98.jpg"
 import "./Vision.css";
 function Vision() {
   return (
@@ -472,86 +472,40 @@ function Vision() {
         </Container>
       </section>
       {/* Meet Our Leadership Section */}
-      {/* Wrapper to add spacing around the image section */}
- <Box
-  sx={{
-    display: "flex",
-    justifyContent: "center",
-  }}
->
-  <div
-    style={{
-      width: "80%",
-      borderRadius: "20px",
-      overflow: "hidden",
-      backgroundColor: "white",
-      height: "100%",
-      textAlign: "center",
-      position: "relative",
-    }}
-  >
-    {/* Background Image Section */}
-    <section
-      style={{
-        position: "relative",
-        margin: 0,
-        backgroundImage: `url(${PastorCollage})`,
-        backgroundSize: "contain", // keeps it filled
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        color: "white",
-        minHeight: "80vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      {/* Top Titles */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: "1rem",
-          left: "50%",
-          transform:" translate(-50%, 20%)",
-          textAlign: "center",
-          zIndex: 3,
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{ fontWeight: "bold", color: "black" }}
-        >
-          Our Leadership
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{ color: "grey", mt: 0.5 }}
-        >
-          Meet our Pastors
-        </Typography>
-      </Box>
-
-      {/* Bottom Title */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: "1rem",
-          left: "50%",
-          transform:" translate(-50%, -40%)",
-          textAlign: "center",
-          zIndex: 3,
-        }}
-      >
-        <Typography
-          variant="h5"
-          sx={{ fontWeight: "bold", color: "black" }}
-        >
-          Pastor Gavin & Pastor Vicky
-        </Typography>
-      </Box>
-    </section>
-  </div>
-</Box>
+      <Container sx={{ py: 4 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: "bold", color: "black", mb: 2 }}
+          >
+             Meet our Pastors
+          </Typography>
+          
+          {/* Pastor Collage Image */}
+          <Box
+            component="img"
+            src={PastorCollage}
+            alt="Pastor Gavin & Pastor Vicky"
+            sx={{
+              width: "80%",
+              maxWidth: "800px",
+              height: "700px",
+              borderRadius: "20px",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+              mb: 3,
+              objectFit: "cover",
+              objectPosition: "top"
+            }}
+          />
+          
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: "bold", color: "black" }}
+          >
+            Pastor Gavin & Pastor Vicky
+          </Typography>
+        </Box>
+      </Container>
 
     </div>
   );
