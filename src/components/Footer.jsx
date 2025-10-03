@@ -42,14 +42,17 @@ const Footer = () => {
           </div>
           <div className="footer-column-1">
             <h4>Contact</h4>
-            <Stack className='address' direction="row" alignItems="center" spacing={1}>
-              <LocationOnOutlinedIcon fontSize="small" />
-              <span>72 Marlborough Road, Springfield</span>
-            </Stack>
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <EmailOutlinedIcon fontSize="small" />
-              <span>info@theactivechurch.org</span>
-            </Stack>
+            {/* <br /> */}
+            <div>
+              <Stack className='address' direction="row" alignItems="center" spacing={1}>
+                <LocationOnOutlinedIcon fontSize="small" />
+                <span>72 Marlborough Road, Springfield</span>
+              </Stack>
+              <Stack direction="row" alignItems="center" spacing={1}>
+                <EmailOutlinedIcon fontSize="small" />
+                <span>info@theactivechurch.org</span>
+              </Stack>
+            </div>
           </div>
         </div>
       </div>
