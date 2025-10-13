@@ -3,54 +3,23 @@ import './Watch_Live.css'
 import { Link } from 'react-router-dom';
 
 function Watch_Live() {
-      // Utility: find the next service date
-    const getNextServiceDate = () => {
-        const now = new Date();
-
-        // Friday 18:00
-        const nextFriday = new Date(now);
-        nextFriday.setDate(
-            now.getDate() + ((5 - now.getDay() + 7) % 7 || 7) // 5 = Friday
-        );
-        nextFriday.setHours(18, 0, 0, 0);
-
-        // Sunday 09:00
-        const nextSunday = new Date(now);
-        nextSunday.setDate(
-            now.getDate() + ((0 - now.getDay() + 7) % 7 || 7) // 0 = Sunday
-        );
-        nextSunday.setHours(9, 0, 0, 0);
-
-        // Pick whichever is sooner but still after 'now'
-        if (nextFriday > now && nextFriday < nextSunday) {
-            return nextFriday;
-        } else {
-            return nextSunday;
-        }
-    };
-
-    const [targetDate, setTargetDate] = useState(getNextServiceDate);
+    const targetDate = new Date('2025-10-13T18:30:00');
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
         minutes: 0,
         seconds: 0,
-        live: false
+        live: true
     });
 
     useEffect(() => {
         const updateCountdown = () => {
             const now = new Date();
             const diff = targetDate - now;
-
             if (diff <= 0) {
-                // Once reached, schedule the NEXT service
-                const newTarget = getNextServiceDate();
-                setTargetDate(newTarget);
-                setTimeLeft({ live: true });
+                setTimeLeft({ live: false });
                 return;
             }
-
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
             const minutes = Math.floor((diff / (1000 * 60)) % 60);

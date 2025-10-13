@@ -13,7 +13,8 @@ body, html, #root, .App {
 .banner {
   width: 100%;
   min-height: 720px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png') right/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png') center/cover no-repeat;
+  /* changed 'right/cover' to 'center/cover' */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,47 +25,54 @@ body, html, #root, .App {
   padding-left: 64px;
   padding-right: 64px;
 }
+.hero-left,
 .hero-right {
-  /* border:1px solid red; */
-  flex: 0 0 50%;
+  flex: 1 1 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 0px;
-  z-index: 30;
+  min-width: 0;
+  min-height: 0;
+  width:50%;
+  height: 100%; /* Ensure both fill parent height */
+  box-sizing: border-box;
+  padding: 88px 0 88px 0px;
 }
-
+.hero-left {
+  margin-right: 0;
+}
 .hero-collage {
   width: 100%;
-  max-width: 800px; /* increase max width */
+  max-width: 600px;
   height: auto;
-  object-fit: cover; /* fill the container more visually */
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 28px 70px rgba(0,0,0,0.6);
-  transform: translateX(28px) translateY(6px);
+  margin: 0 auto;
+  display: block;
+  transform: none;
 }
 .hero-left {
   flex: 0 0 58%;
-  margin-right: 10%;
-  padding: 88px 0 88px 72px;
+  margin-right: 1%;
+  padding: 88px 0 88px 0px;
   color: #fff;
   z-index: 2;
 }
 .hero-left h1 {
-  font-size: 5rem;
+  font-size: 5.4rem;
   font-weight: 900;
   margin: 4px 0 18px 0;
   line-height: 1.02;
-
-  overflow: visible;       /* show full text, prevent cutting */
+  overflow: hidden;       /* show full text, prevent cutting */
   white-space: normal;     /* allow wrapping if needed */
   text-overflow: unset;    /* remove ellipsis */
 }
 
 .hero-left h1 span {
   display: block;          /* keep on its own line */
-  
-  overflow: visible;       /* ensure fully visible */
+  overflow: hidden;       /* ensure fully visible */
   white-space: normal;     /* allow wrapping */
   text-overflow: unset;    /* remove ellipsis */
 }
@@ -75,12 +83,7 @@ body, html, #root, .App {
   max-width: 620px;
 }
 .hero-buttons {
-  /* border:1px solid red; */
-  height:4rem;
-  width:25rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 18px;
 }
 .btn {
@@ -118,18 +121,21 @@ body, html, #root, .App {
   flex: 0 0 40%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center; /* center image horizontally */
   padding-right: 36px;
   z-index: 30;
+  overflow: visible; /* ensure image is not clipped */
 }
 .hero-right .hero-collage {
-  width: 600px;
+  width: 370px;
+  height:370px;
   max-width: 48vw;
   margin-right: 40%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 28px 70px rgba(0,0,0,0.6);
-  transform: translateX(28px) translateY(6px);
+  transform: none; /* remove translation so image stays in view */
+  display: block;
 }
 
 /* dark gradient vignette to match screenshot */
@@ -257,6 +263,7 @@ body, html, #root, .App {
   gap: 8px;
 }
 
+
 /* CTA Section */
 .cta-section {
   background: #222;
@@ -364,8 +371,8 @@ hr {
     padding-right: 32px;
   }
   .hero-right .hero-collage {
-    max-width: 55vw;
-    margin-right: 20%;
+    max-width: 90vw;
+    margin: 0 auto;
   }
   .pillars-container {
     gap: 120px;
@@ -383,6 +390,7 @@ hr {
     flex-direction: column;
     padding-top: 80px;
     min-height: 600px;
+    background-position: center !important; /* always center bg image */
   }
   .hero-text {
     padding-left: 0;
@@ -409,13 +417,17 @@ hr {
     flex: 0 0 100%;
     padding-right: 0;
     margin-top: 24px;
+    justify-content: center;
   }
-  .hero-collage {
-    max-width: 90%; /* fill most of the screen on mobile */
-    transform: none;
+  .hero-right .hero-collage {
+    width: 100%;
+    max-width: 480px;
+    min-width: 280px;
+    margin: 24px auto 0 auto;
+    height: auto;
+    display: block;
   }
 }
-
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -429,6 +441,7 @@ hr {
   .banner {
     min-height: 480px;
     padding-top: 60px;
+    background-position: center !important;
   }
   .hero-text h1 {
     font-size: 2rem;
@@ -474,6 +487,7 @@ hr {
     min-height: 400px;
     padding: 40px 12px 20px 12px;
     text-align: center;
+    background-position: center !important;
   }
   .hero-left {
     padding: 40px 12px;
@@ -487,10 +501,10 @@ hr {
     font-size: 0.95rem;
   }
   .hero-right .hero-collage {
-    width: 90%;
-    max-width: 320px;
+    width: 100%;
+    max-width: 98vw;
+    min-width: 120px;
     margin: 20px auto 0 auto;
-    transform: none;
   }
   .hero-buttons {
     flex-direction: column;
