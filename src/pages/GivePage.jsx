@@ -590,14 +590,14 @@ const GivePage = () => {
       <section
         style={{
           position: "relative",
-          backgroundImage: `url(${WhyWeGivepic})`,
+          background: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)),url(${WhyWeGivepic})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "80px 20px",
           marginTop: "8%",
-          backdropFilter: "blur(1px)",
-          WebkitBackdropFilter: "blur(1px)",
-          backgroundColor: "rgba(255,255,255,0.35)",
+          // backdropFilter: "blur(1px)",
+          // WebkitBackdropFilter: "blur(1px)",
+          // background:"linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86))",
         }}
       >
         <Typography

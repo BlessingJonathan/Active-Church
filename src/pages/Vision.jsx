@@ -1,4 +1,3 @@
-
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
@@ -8,7 +7,7 @@ import Children from "../assets/kidschurch.jpg";
 import Youth from "../assets/youth.jpg";
 import Banner from "../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png"
 import WhatWeBelieve from "../assets/img4.jpeg"
-import PastorCollage from "../assets/Group 105.png"
+import PastorCollage from "../assets/WhatsApp Image 2025-10-02 at 1.29.44 PM.jpeg"
 import "./Vision.css";
 function Vision() {
   return (
@@ -76,7 +75,10 @@ function Vision() {
         alignItems: "center", // center "Our Vision" vertically
         justifyContent: "flex-start",
         gap: "2rem",
-        flexWrap: "wrap", // stack on small screens
+        flexWrap: "wrap",
+        marginTop:"4rem",
+        marginBottom: "2rem",
+        marginLeft:"2rem",
       }}
     >
       {/* Left: Our Vision */}
@@ -87,6 +89,7 @@ function Vision() {
           fontWeight: "bold",
           textAlign: "left",
           whiteSpace: "nowrap",
+          marginRight:"6rem",
         }}
       >
         Our Vision
@@ -113,7 +116,7 @@ function Vision() {
 </section>
 
 
-      <section style={{ padding: "2rem 0" }}>
+      <section >
         <Container>
           {/* Row 1: Image Left, Text Right */}
           <Box
@@ -122,20 +125,23 @@ function Vision() {
               flexWrap: "wrap",
               alignItems: "center",
               justifyContent: "space-between",
-              mb: 6, // spacing between rows
+              mb: 6,
               gap: "2rem",
             }}
           >
             {/* Image */}
             <Box
               component="img"
-              src={Children} // Change path
+              src={Children}
               alt="Active Church Kids"
               sx={{
                 width: { xs: "100%", md: "40%" },
-                borderRadius: "16px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+                borderRadius: "24px", // curved edges
+                boxShadow: "none",    // remove shadow
                 objectFit: "cover",
+                padding: 0,           // remove padding
+                background: "none",   // remove background
+                display: "block",
               }}
             />
             {/* Text */}
@@ -164,7 +170,7 @@ function Vision() {
           <Box
             sx={{
               display: "flex",
-              flexWrap: "wrap-reverse", // reverse order for mobile
+              flexWrap: "wrap-reverse",
               alignItems: "center",
               justifyContent: "space-between",
               gap: "2rem",
@@ -172,41 +178,44 @@ function Vision() {
           >
             {/* Text */}
             <Box sx={{ flex: 1, maxWidth: "600px", overflow: "hidden" }}>
-  <Typography
-    variant="h4"
-    sx={{
-      mb: 2,
-      fontStyle: "italic",
-      fontFamily: "Inter, sans-serif", // ✅ fixed
-      overflow: "hidden",
-      whiteSpace: "nowrap", // ✅ prevents accidental wrapping
-      textOverflow: "ellipsis", // ✅ cuts off long text instead of scrollbar
-    }}
-  >
-    Active Youth
-  </Typography>
-  <Typography
-    variant="body1"
-    sx={{ lineHeight: 1.6, overflow: "hidden" }}
-  >
-    Active Youth is about young people who are passionate about Christ. 
-    It’s about youth who are winning in their lives and pursuing a 
-    relationship with their Saviour as they change the world around them. 
-    Enjoy a great variety of entertaining evenings mixed with the power 
-    of the Word.
-  </Typography>
-</Box>
+              <Typography
+                variant="h4"
+                sx={{
+                  mb: 2,
+                  fontStyle: "italic",
+                  fontFamily: "Inter, sans-serif",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Active Youth
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ lineHeight: 1.6, overflow: "hidden" }}
+              >
+                Active Youth is about young people who are passionate about Christ. 
+                It’s about youth who are winning in their lives and pursuing a 
+                relationship with their Saviour as they change the world around them. 
+                Enjoy a great variety of entertaining evenings mixed with the power 
+                of the Word.
+              </Typography>
+            </Box>
 
             {/* Image */}
             <Box
               component="img"
-              src={Youth} // Change path
+              src={Youth}
               alt="Active Youth"
               sx={{
                 width: { xs: "100%", md: "40%" },
-                borderRadius: "16px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+                borderRadius: "24px", // curved edges
+                boxShadow: "none",    // remove shadow
                 objectFit: "cover",
+                padding: 0,           // remove padding
+                background: "none",   // remove background
+                display: "block",
               }}
             />
           </Box>
@@ -217,6 +226,7 @@ function Vision() {
         style={{
           position: "relative",
           padding: "4rem 0",
+          marginTop:"16px",
           backgroundImage: `url(${WhatWeBelieve})`, // Change this path
           backgroundSize: "cover",
           backgroundPosition: "center",

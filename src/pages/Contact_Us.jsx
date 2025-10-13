@@ -1,19 +1,78 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Input from '@mui/joy/Input';
-
-import './Contact_Us.css'
-
-
+import Button from '@mui/joy/Button';
+import { Textarea } from '@mui/joy';
+import './Contact_Us.css';
+import emailer from '../utils/emailer'; // Adjust path if needed
 
 function Contact_Us() {
-    const [variant, setVariant] = React.useState('solid')
+    const [form, setForm] = useState({
+        name: '',
+        surname: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+    const [errors, setErrors] = useState({});
+    const [sending, setSending] = useState(false);
+    const [success, setSuccess] = useState('');
+
+    // Remove overflow from inputs
+    const inputSx = {
+        height: "30px",
+        margin: "5px 0 20px",
+        width: "100%",
+        borderRadius: "5px",
+        border: "1px solid rgba(190,190,190,0.781)",
+        fontSize: "1rem",
+        background: "#fff",
+        overflow: "visible"
+    };
+
+    // Validation
+    const validate = () => {
+        const newErrors = {};
+        if (!form.name.trim()) newErrors.name = "Name is required";
+        if (!form.surname.trim()) newErrors.surname = "Surname is required";
+        if (!form.email.trim()) newErrors.email = "Email is required";
+        else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = "Invalid email";
+        if (!form.message.trim()) newErrors.message = "Message is required";
+        return newErrors;
+    };
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+        setErrors({ ...errors, [e.target.name]: '' });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const newErrors = validate();
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+        setSending(true);
+        setSuccess('');
+        try {
+            await emailer.send({
+                name: form.name,
+                surname: form.surname,
+                email: form.email,
+                phone: form.phone,
+                message: form.message
+            });
+            setSuccess('Message sent successfully!');
+            setForm({ name: '', surname: '', email: '', phone: '', message: '' });
+        } catch (err) {
+            setSuccess('Failed to send message. Please try again.');
+        }
+        setSending(false);
+    };
+
     return (
         <>
-
-        
-
             {/* =========== Hero Section =============== */}
-
             <section className="hero-sect">
                 <h1>Contact Us</h1>
                 <p>
@@ -24,43 +83,110 @@ function Contact_Us() {
             </section>
 
             {/* ========= Contact Section ================== */}
-
             <section className="contact-section">
                 <div className="contact-blk">
-                    <form action="" className='form'>
+                    <form className='form' onSubmit={handleSubmit} noValidate>
                         <h3>Send us a Message</h3>
                         <p>Fill out the form below and we'll get back to you as soon as possible</p>
 
                         <div className="names-input">
                             <label htmlFor="Name">Name
-                                <br />
-                                <input size="sm" placeholder="Name" />
+                                <Input
+                                    name="name"
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    size="sm"
+                                    variant="outlined"
+                                    sx={inputSx}
+                                    error={!!errors.name}
+                                />
+                                {errors.name && <span style={{ color: 'red', fontSize: '0.9em' }}>{errors.name}</span>}
                             </label>
                             <label htmlFor="Surname">Surname
-                                <br />
-                                <input size="sm" placeholder="Surname" />
+                                <Input
+                                    name="surname"
+                                    value={form.surname}
+                                    onChange={handleChange}
+                                    size="sm"
+                                    variant="outlined"
+                                    sx={inputSx}
+                                    error={!!errors.surname}
+                                />
+                                {errors.surname && <span style={{ color: 'red', fontSize: '0.9em' }}>{errors.surname}</span>}
                             </label>
                         </div>
 
                         <label htmlFor="Email">Email
-                            <br />
-                            <input type="text" size="sm" placeholder='Email' />
+                            <Input
+                                name="email"
+                                type="email"
+                                value={form.email}
+                                onChange={handleChange}
+                                size="sm"
+                                variant="outlined"
+                                sx={inputSx}
+                                error={!!errors.email}
+                            />
+                            {errors.email && <span style={{ color: 'red', fontSize: '0.9em' }}>{errors.email}</span>}
                         </label>
 
-                        <label htmlFor="Phone"> Phone (optional)
-                            <br />
-                            <input size="sm" placeholder="(000) 000 0000" />
+                        <label htmlFor="Phone">Phone (optional)
+                            <Input
+                                name="phone"
+                                value={form.phone}
+                                onChange={handleChange}
+                                size="sm"
+                                variant="outlined"
+                                placeholder="(000) 000 0000"
+                                sx={inputSx}
+                            />
                         </label>
-
 
                         <label htmlFor="Message">
-                            <p> Message </p>
-                            <fieldset placeholder='Tell us how we can help you...'>
-
-                            </fieldset>
+                            <p>Message</p>
+                            <Textarea
+                                name="message"
+                                value={form.message}
+                                onChange={handleChange}
+                                size="lg"
+                                minRows={4}
+                                placeholder="Tell us how we can help you..."
+                                sx={{
+                                    borderRadius: "5px",
+                                    border: "1px solid rgba(190,190,190,0.781)",
+                                    marginBottom: "20px",
+                                    background: "#fff",
+                                    fontSize: "1rem",
+                                    overflow: "visible"
+                                }}
+                                error={!!errors.message}
+                            />
+                            {errors.message && <span style={{ color: 'red', fontSize: '0.9em' }}>{errors.message}</span>}
                         </label>
 
-                        <button color='black' variant={variant} >Send Message</button>
+                        <Button
+                            type="submit"
+                            variant="solid"
+                            sx={{
+                                height: "30px",
+                                color: "white",
+                                backgroundColor: "black",
+                                borderRadius: "5px",
+                                fontSize: "1rem",
+                                boxShadow: "none",
+                                '&:hover': {
+                                    backgroundColor: "#222",
+                                }
+                            }}
+                            loading={sending}
+                        >
+                            {sending ? "Sending..." : "Send Message"}
+                        </Button>
+                        {success && (
+                            <div style={{ marginTop: 12, color: success.includes('success') ? 'green' : 'red' }}>
+                                {success}
+                            </div>
+                        )}
                     </form>
                 </div>
 

@@ -24,28 +24,35 @@ body, html, #root, .App {
   padding-left: 64px;
   padding-right: 64px;
 }
+.hero-left,
 .hero-right {
-  flex: 0 0 50%;
+  flex: 1 1 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 32px;
-  z-index: 30;
+  min-width: 0;
+  min-height: 0;
+  height: 100%; /* Ensure both fill parent height */
+  box-sizing: border-box;
+  padding: 88px 0 88px 0px;
 }
 
 .hero-collage {
   width: 100%;
-  max-width: 800px; /* increase max width */
+  max-width: 600px;
   height: auto;
-  object-fit: cover; /* fill the container more visually */
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 28px 70px rgba(0,0,0,0.6);
-  transform: translateX(28px) translateY(6px);
+  margin: 0 auto;
+  display: block;
+  transform: none;
 }
 .hero-left {
   flex: 0 0 58%;
-  margin-right: 10%;
-  padding: 88px 0 88px 72px;
+  margin-right: 1%;
+  padding: 88px 0 88px 0px;
   color: #fff;
   z-index: 2;
 }
@@ -112,9 +119,10 @@ body, html, #root, .App {
   flex: 0 0 40%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center; /* center image horizontally */
   padding-right: 36px;
   z-index: 30;
+  overflow: visible; /* ensure image is not clipped */
 }
 .hero-right .hero-collage {
   width: 600px;
@@ -123,7 +131,8 @@ body, html, #root, .App {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 28px 70px rgba(0,0,0,0.6);
-  transform: translateX(28px) translateY(6px);
+  transform: none; /* remove translation so image stays in view */
+  display: block;
 }
 
 /* dark gradient vignette to match screenshot */
@@ -139,7 +148,7 @@ body, html, #root, .App {
   width: 100%;
   background: 
     linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
-    url('../assets/section1.png') center/cover no-repeat;
+    url('../assets/welco.jpeg') center/cover no-repeat;
   padding: 64px 0 0 0;
   text-align: center;
   position: relative;
@@ -359,8 +368,8 @@ hr {
     padding-right: 32px;
   }
   .hero-right .hero-collage {
-    max-width: 55vw;
-    margin-right: 20%;
+    max-width: 90vw;
+    margin: 0 auto;
   }
   .pillars-container {
     gap: 120px;
@@ -404,13 +413,13 @@ hr {
     flex: 0 0 100%;
     padding-right: 0;
     margin-top: 24px;
+    justify-content: center;
   }
-  .hero-collage {
-    max-width: 90%; /* fill most of the screen on mobile */
-    transform: none;
+  .hero-right .hero-collage {
+    max-width: 90vw;
+    margin: 24px auto 0 auto;
   }
 }
-
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
