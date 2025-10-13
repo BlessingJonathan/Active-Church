@@ -3,13 +3,13 @@ import './Watch_Live.css'
 import { Link } from 'react-router-dom';
 
 function Watch_Live() {
-    const targetDate = new Date('2025-10-03T10:00:00');
+    const targetDate = new Date('2025-10-13T18:30:00');
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
         minutes: 0,
         seconds: 0,
-        live: false
+        live: true
     });
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function Watch_Live() {
             const now = new Date();
             const diff = targetDate - now;
             if (diff <= 0) {
-                setTimeLeft({ live: true });
+                setTimeLeft({ live: false });
                 return;
             }
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
