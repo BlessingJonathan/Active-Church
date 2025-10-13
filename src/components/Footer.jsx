@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           <div className="footer-column-1">
             <h4 className='column-header' >Contact</h4>
-            <div>
+            <div className='col-1-info'>
               <Stack className='address' direction="row" alignItems="center" spacing={1}>
                 <LocationOnOutlinedIcon fontSize="small" />
                 <span>72 Marlborough Road, Springfield</span>
