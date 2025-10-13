@@ -41,8 +41,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-column-1">
+<<<<<<< HEAD
             <h4 className='column-header' >Contact</h4>
             <div className='col-1-info'>
+=======
+            <h4>Contact</h4>
+            {/* <br /> */}
+            <div>
+>>>>>>> main
               <Stack className='address' direction="row" alignItems="center" spacing={1}>
                 <LocationOnOutlinedIcon fontSize="small" />
                 <span>72 Marlborough Road, Springfield</span>

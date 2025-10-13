@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import HeroCollage from "../assets/WhatsApp Image 2025-09-10 at 11.54.50_ef357714.jpg";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -7,9 +6,6 @@ import "./HomePage.css";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-
-
-
 import { Stack, Typography } from "@mui/material";
 const HomePage = () => {
   return (
@@ -25,13 +21,13 @@ const HomePage = () => {
             welcoming community as we grow in Christ and serve others.
           </p>
           <div className="hero-buttons">
-            <a href='watchlive' className="btn primary">
+            <a href="/watchlive" className="btn primary">
               <span className="iconjoin">
                 <i className="fas fa-users"></i>
               </span>{" "}
               Join Our Services
             </a>
-            <a href='watchlive' className="btn secondary">
+            <a href="/watchlive" className="btn secondary">
               Watch Live
             </a>
           </div>
@@ -102,7 +98,7 @@ const HomePage = () => {
                   <span>9:00 AM</span>
                 </Stack>
                 <Stack direction="row" spacing={1} alignItems="center">
-                  <LocationOnOutlinedIcon sx={{ color: "grey.600", fontSize: 30 }} />
+                  <LocationOnOutlinedIcon sx={{ color: "grey.600" }} />
                   <span>72 Marlborough Rd, Springfield</span>
                 </Stack>
               </Stack>
@@ -124,8 +120,8 @@ const HomePage = () => {
                   <AccessTimeOutlinedIcon sx={{ color: "grey.600" }} />
                   <span>6:30 PM</span>
                 </Stack>
-                <Stack className="Stack" direction="row" spacing={1} alignItems="center">
-                  <LocationOnOutlinedIcon className="LocationOnOutlinedIcon" sx={{ color: "grey.600", fontSize: 30 }} />
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <LocationOnOutlinedIcon sx={{ color: "grey.600" }} />
                   <span>72 Marlborough Rd, Springfield</span>
                 </Stack>
               </Stack>
@@ -137,7 +133,7 @@ const HomePage = () => {
       <section className="cta-section">
         <h1>Ready to Take the Next Step?</h1>
         <p>We'd love to meet you and help you on your spiritual journey</p>
-        <a href="contactus" className="contact-btn">
+        <a href="#" className="contact-btn">
           Contact Us
         </a>
       </section>
