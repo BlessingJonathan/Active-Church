@@ -41,14 +41,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-column-1">
-            <h4 className='column-header' >Contact</h4>
+            <h4 className='column-header contact' >Contact</h4>
             <div className='col-1-info'>
               <Stack className='address' direction="row" alignItems="center" spacing={1}>
-                <LocationOnOutlinedIcon fontSize="small" />
+                <LocationOnOutlinedIcon fontSize="small" className="location-icon" />
                 <span>72 Marlborough Road, Springfield</span>
               </Stack>
               <Stack direction="row" alignItems="center" spacing={1}>
-                <EmailOutlinedIcon fontSize="small" />
+                <EmailOutlinedIcon fontSize="small" className="email-icon" />
                 <span>info@theactivechurch.org</span>
               </Stack>
             </div>
