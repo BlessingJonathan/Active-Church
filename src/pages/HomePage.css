@@ -1,8 +1,11 @@
-body, html, #root, .App {
+body,
+html,
+#root,
+.App {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   background: #fff;
   width: 100vw;
   min-height: 100vh;
@@ -13,7 +16,9 @@ body, html, #root, .App {
 .banner {
   width: 100%;
   min-height: 720px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/SnapInsta.to_504163605_18326229490205809_4089181433337316770_n.png")
+      center/cover no-repeat;
   /* changed 'right/cover' to 'center/cover' */
   display: flex;
   align-items: center;
@@ -34,7 +39,7 @@ body, html, #root, .App {
   align-items: center;
   min-width: 0;
   min-height: 0;
-  width:50%;
+  width: 50%;
   height: 100%; /* Ensure both fill parent height */
   box-sizing: border-box;
   padding: 88px 0 88px 0px;
@@ -44,43 +49,49 @@ body, html, #root, .App {
 }
 .hero-collage {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 28px 70px rgba(0,0,0,0.6);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
   margin: 0 auto;
   display: block;
   transform: none;
 }
 .hero-left {
   flex: 0 0 58%;
-  margin-right: 1%;
+  margin-right: 0;
   padding: 88px 0 88px 0px;
   color: #fff;
   z-index: 2;
+  padding-right: 0;
 }
 .hero-left h1 {
   font-size: 5.4rem;
   font-weight: 900;
-  margin: 4px 0 18px 0;
+  margin: 4px 0 0px 0;
   line-height: 1.02;
-  overflow: hidden;       /* show full text, prevent cutting */
-  white-space: normal;     /* allow wrapping if needed */
-  text-overflow: unset;    /* remove ellipsis */
+  overflow: hidden; /* show full text, prevent cutting */
+  white-space: normal; /* allow wrapping if needed */
+  text-overflow: unset;
+  padding-right: 0; /* remove ellipsis */
 }
 
 .hero-left h1 span {
-  display: block;          /* keep on its own line */
-  overflow: hidden;       /* ensure fully visible */
-  white-space: normal;     /* allow wrapping */
-  text-overflow: unset;    /* remove ellipsis */
+  display: inline-block; /* keep on its own line */
+  overflow: hidden; /* ensure fully visible */
+  white-space: normal; /* allow wrapping */
+  text-overflow: unset;
+  margin-right: 0;
+  padding-right: 0; /* remove ellipsis */
 }
 .hero-left p {
   font-size: 1.15rem;
   margin-bottom: 28px;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
   max-width: 620px;
+  margin-right: 0;
+  padding-right: 0;
 }
 .hero-buttons {
   display: flex;
@@ -102,12 +113,12 @@ body, html, #root, .App {
 .btn.primary {
   background: #fff;
   color: #111;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 .btn.secondary {
   background: transparent;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 .btn.primary:hover,
 .btn.secondary:hover {
@@ -127,38 +138,44 @@ body, html, #root, .App {
   overflow: visible; /* ensure image is not clipped */
 }
 .hero-right .hero-collage {
-  width: 370px;
-  height:370px;
-  max-width: 48vw;
-  margin-right: 40%;
+  width: 500px;
+  /* height:450px; */
+  /* max-width: 48vw; */
+  /* margin-right: 40%; */
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 28px 70px rgba(0,0,0,0.6);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
   transform: none; /* remove translation so image stays in view */
   display: block;
 }
 
 /* dark gradient vignette to match screenshot */
 .banner::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at right, rgba(0,0,0,0) 30%, rgba(0,0,0,0.55) 70%);
+  background: radial-gradient(
+    ellipse at right,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.55) 70%
+  );
   pointer-events: none;
 }
 
 .welcome-section {
   width: 100%;
-  background: 
-    linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), 
-    url('../assets/welco.jpeg') center/cover no-repeat;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.86),
+      rgba(255, 255, 255, 0.86)
+    ),
+    url("../assets/welco.jpeg") center/cover no-repeat;
   padding: 64px 0 0 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .welcome-section::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -195,7 +212,7 @@ body, html, #root, .App {
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .icon-circle svg {
   color: #e53935;
@@ -208,7 +225,7 @@ body, html, #root, .App {
 }
 .pillar-description {
   font-size: 1rem;
-  color:black;
+  color: black;
 }
 
 /* Upcoming Events */
@@ -224,7 +241,7 @@ body, html, #root, .App {
 }
 .events-subtitle {
   font-size: 1rem;
-  color:black;
+  color: black;
   margin-bottom: 32px;
 }
 .events-container {
@@ -235,7 +252,7 @@ body, html, #root, .App {
 .event-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 30px 46px;
   min-width: 240px;
   max-width: 320px;
@@ -262,7 +279,6 @@ body, html, #root, .App {
   align-items: center;
   gap: 8px;
 }
-
 
 /* CTA Section */
 .cta-section {
@@ -371,8 +387,11 @@ hr {
     padding-right: 32px;
   }
   .hero-right .hero-collage {
-    max-width: 90vw;
+    width: 370px;
     margin: 0 auto;
+  }
+  .hero-right{
+    width:90%;
   }
   .pillars-container {
     gap: 120px;
@@ -413,9 +432,10 @@ hr {
     align-items: flex-start;
     padding: 0 16px;
   }
-   .hero-right {
+  .hero-right {
     flex: 0 0 100%;
-    padding-right: 0;
+    padding:20px 0 20px 0;
+    width:90%;
     margin-top: 24px;
     justify-content: center;
   }
@@ -426,6 +446,32 @@ hr {
     margin: 24px auto 0 auto;
     height: auto;
     display: block;
+  }
+  /* Eliminate extra space after h1 span and p in hero-left */
+  .hero-left h1,
+  .hero-left h1 span,
+  .hero-left p {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    display: inline-block !important;
+    /* Remove centering and stretching */
+  }
+
+  /* On mobile, keep text centered for readability */
+  @media (max-width: 900px) {
+    .hero-left h1,
+    .hero-left h1 span,
+    .hero-left p {
+      width: auto !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      text-align: center !important;
+      display: inline-block !important;
+    }
   }
 }
 @media (max-width: 600px) {
@@ -462,6 +508,9 @@ hr {
   .footer-content {
     padding: 0 8px;
   }
+  .hero-right{
+    width:90%;
+  }
 }
 
 /* Extra Small Devices (phones ≤ 480px) */
@@ -479,7 +528,7 @@ hr {
     margin-right: 0;
     font-size: 0.85rem;
   }
-    .hero-collage {
+  .hero-collage {
     max-width: 90%; /* almost full width on small screens */
   }
 
@@ -492,6 +541,7 @@ hr {
   .hero-left {
     padding: 40px 12px;
     margin-right: 0;
+    width:90%;
   }
   .hero-left h1 {
     font-size: 1.8rem;
@@ -501,10 +551,12 @@ hr {
     font-size: 0.95rem;
   }
   .hero-right .hero-collage {
-    width: 100%;
-    max-width: 98vw;
+    width: 90%;
     min-width: 120px;
     margin: 20px auto 0 auto;
+  }
+  .hero-right {
+    width: 90%;
   }
   .hero-buttons {
     flex-direction: column;
@@ -545,6 +597,12 @@ hr {
   .hero-left h1 {
     font-size: 1.5rem;
   }
+  .hero-right {
+    width:90%;
+  }
+  .hero-left{
+width:90%;
+  }
   .hero-left p {
     font-size: 0.85rem;
   }
@@ -575,6 +633,70 @@ hr {
 }
 
 /* Hide horizontal scrollbar */
-body, html, #root, .App {
+body,
+html,
+#root,
+.App {
   overflow-x: hidden !important;
+}
+
+/* Responsive: Make banner and hero sections 90% width on smaller screens */
+@media (max-width: 900px) {
+  .banner {
+    width: 90% !important;
+    margin: 0 auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero-left,
+  .hero-right {
+    width: 90% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    width: 90% !important;
+    margin: 0 auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero-left,
+  .hero-right {
+    width: 90% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    width: 90% !important;
+    margin: 0 auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero-left,
+  .hero-right {
+    width: 90% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
