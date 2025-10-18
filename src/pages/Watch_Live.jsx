@@ -3,7 +3,7 @@ import './Watch_Live.css'
 import { Link } from 'react-router-dom';
 
 function Watch_Live() {
-    const targetDate = new Date('2025-10-13T18:30:00');
+    const targetDate = new Date('2025-10-17T18:30:00');
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
