@@ -151,8 +151,8 @@ function Vision() {
                 sx={{
                   mb: 2,
                   fontStyle: "italic",
-                  fontFamily: "'Inter', 'sans-serif'",
-                  overflow:"hidden"
+                  fontFamily: "Inter, sans-serif",
+                  overflow:"hidden",
                 }}
               >
                 Active Children's Church
