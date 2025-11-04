@@ -1,36 +1,66 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Watch_Live.css'
 import { Link } from 'react-router-dom';
 
 function Watch_Live() {
-    const targetDate = new Date('2025-10-17T18:30:00');
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
         minutes: 0,
         seconds: 0,
-        live: true
+        live: false,
     });
 
     useEffect(() => {
+        const getNextFriday = () => {
+            const now = new Date();
+            const friday = new Date(now);
+
+            // Get current day (0 = Sunday, 5 = Friday)
+            const currentDay = now.getDay();
+
+            // Calculate days until next Friday
+            let daysUntilFriday = (5 - currentDay + 7) % 7;
+
+            // If it's Friday but past 6:30 PM, go to next Friday
+            if (currentDay === 5) {
+                friday.setHours(18, 30, 0, 0);
+                if (now >= friday) {
+                    daysUntilFriday = 7;
+                } else {
+                    daysUntilFriday = 0;
+                }
+            }
+
+            // Set to next Friday at 6:30 PM
+            friday.setDate(now.getDate() + daysUntilFriday);
+            friday.setHours(18, 30, 0, 0);
+
+            return friday;
+        };
+
         const updateCountdown = () => {
             const now = new Date();
+            const targetDate = getNextFriday();
             const diff = targetDate - now;
+
             if (diff <= 0) {
-                setTimeLeft({ live: false });
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0, live: true });
                 return;
             }
+
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
             const minutes = Math.floor((diff / (1000 * 60)) % 60);
             const seconds = Math.floor((diff / 1000) % 60);
+
             setTimeLeft({ days, hours, minutes, seconds, live: false });
         };
 
         updateCountdown();
         const timer = setInterval(updateCountdown, 1000);
         return () => clearInterval(timer);
-    }, [targetDate]);
+    }, []);
 
     return (
         <>
