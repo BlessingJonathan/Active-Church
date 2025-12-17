@@ -8,11 +8,12 @@ import Youth from "../assets/youth.jpg";
 import Banner from "../assets/SnapInsta.to_503671807_18325249375205809_7112355811609069840_n.png"
 import WhatWeBelieve from "../assets/img4.jpeg"
 import PastorCollage from "../assets/WhatsApp Image 2025-10-02 at 1.29.44 PM.jpeg"
+import ActiveTeamsBG from "../assets/WhatsApp Image 2025-12-05 at 21.03.38_32206319.jpg";
 import "./Vision.css";
 function Vision() {
   return (
     <div>
- 
+
       <section
         style={{
           color: "white",
@@ -21,12 +22,12 @@ function Vision() {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          backgroundImage:`url(${Banner})`,
+          backgroundImage: `url(${Banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           position: "relative",
-         
+
           padding: "4%",
         }}
       >
@@ -64,56 +65,56 @@ function Vision() {
           </Typography>
         </Container>
       </section>
-     <section
-  className="our-vision-content"
-  style={{ padding: "2rem", marginTop: "4rem" }} // added margin-top
->
-  <Container>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center", // center "Our Vision" vertically
-        justifyContent: "flex-start",
-        gap: "2rem",
-        flexWrap: "wrap",
-        marginTop:"4rem",
-        marginBottom: "2rem",
-        marginLeft:"2rem",
-      }}
-    >
-      {/* Left: Our Vision */}
-      <Typography
-        variant="h4"
-        gutterBottom
-        sx={{
-          fontWeight: "bold",
-          textAlign: "left",
-          whiteSpace: "nowrap",
-          marginRight:"6rem",
-        }}
+      <section
+        className="our-vision-content"
+        style={{ padding: "2rem", marginTop: "4rem" }} // added margin-top
       >
-        Our Vision
-      </Typography>
+        <Container>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center", // center "Our Vision" vertically
+              justifyContent: "flex-start",
+              gap: "2rem",
+              flexWrap: "wrap",
+              marginTop: "4rem",
+              marginBottom: "2rem",
+              marginLeft: "2rem",
+            }}
+          >
+            {/* Left: Our Vision */}
+            <Typography
+              variant="h4"
+              gutterBottom
+              sx={{
+                fontWeight: "bold",
+                textAlign: "left",
+                whiteSpace: "nowrap",
+                marginRight: "6rem",
+              }}
+            >
+              Our Vision
+            </Typography>
 
-      {/* Right: Paragraph */}
-      <Typography
-        variant="body1"
-        paragraph
-        sx={{ textAlign: "left", maxWidth: "700px" }}
-      >
-        The Active Church was birthed in 2004 in our home when God called us
-        very specifically to reach a nation by reaching the forgotten. The
-        calling was affirmed and we went from helping churches build youth
-        groups to starting a church that was youth oriented. We have had the
-        privilege since the birth of this vision of seeing the youth grow into
-        adults who have overcome the challenges of their youth and situations
-        and are now married with children of their own who are planted and
-        flourishing in their lives. The upliftment of lives has always made us
-        so grateful for the calling.
-      </Typography>
-    </div>
-  </Container>
-</section>
+            {/* Right: Paragraph */}
+            <Typography
+              variant="body1"
+              paragraph
+              sx={{ textAlign: "left", maxWidth: "700px" }}
+            >
+              The Active Church was birthed in 2004 in our home when God called us
+              very specifically to reach a nation by reaching the forgotten. The
+              calling was affirmed and we went from helping churches build youth
+              groups to starting a church that was youth oriented. We have had the
+              privilege since the birth of this vision of seeing the youth grow into
+              adults who have overcome the challenges of their youth and situations
+              and are now married with children of their own who are planted and
+              flourishing in their lives. The upliftment of lives has always made us
+              so grateful for the calling.
+            </Typography>
+          </div>
+        </Container>
+      </section>
 
 
       <section >
@@ -152,7 +153,7 @@ function Vision() {
                   mb: 2,
                   fontStyle: "italic",
                   fontFamily: "Inter, sans-serif",
-                  overflow:"hidden",
+                  overflow: "hidden",
                 }}
               >
                 Active Children's Church
@@ -195,10 +196,10 @@ function Vision() {
                 variant="body1"
                 sx={{ lineHeight: 1.6, overflow: "hidden" }}
               >
-                Active Youth is about young people who are passionate about Christ. 
-                It’s about youth who are winning in their lives and pursuing a 
-                relationship with their Saviour as they change the world around them. 
-                Enjoy a great variety of entertaining evenings mixed with the power 
+                Active Youth is about young people who are passionate about Christ.
+                It’s about youth who are winning in their lives and pursuing a
+                relationship with their Saviour as they change the world around them.
+                Enjoy a great variety of entertaining evenings mixed with the power
                 of the Word.
               </Typography>
             </Box>
@@ -226,7 +227,7 @@ function Vision() {
         style={{
           position: "relative",
           padding: "4rem 0",
-          marginTop:"16px",
+          marginTop: "16px",
           backgroundImage: `url(${WhatWeBelieve})`, // Change this path
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -268,219 +269,303 @@ function Vision() {
 
           {/* Cards Grid */}
           <Grid
-  container
-  spacing={4}
-  justifyContent="center"
-  alignItems="stretch"
-  sx={{ textAlign: "center" }}
->
-  {/* Card 1 */}
-  <Grid item xs={12} sm={6} md={5} lg={4}>
-    <Box
-      sx={{
-        backgroundColor: "rgba(255,255,255,0.2)",
-        borderRadius: "20px",
-        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        padding: "1.5rem",
-        backdropFilter: "blur(12px)",
-        margin: "0 auto",
-        maxWidth: "400px",
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Box
-          sx={{
-            backgroundColor: "black",
-            borderRadius: "50%",
-            width: 70,
-            height: 70,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginRight: "1rem",
-          }}
-        >
-          <ImportContactsIcon sx={{ color: "red", fontSize: "36px" }} />
-        </Box>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
-          Scripture
-        </Typography>
-      </Box>
+            container
+            spacing={4}
+            justifyContent="center"
+            alignItems="stretch"
+            sx={{ textAlign: "center" }}
+          >
+            {/* Card 1 */}
+            <Grid item xs={12} sm={6} md={5} lg={4}>
+              <Box
+                sx={{
+                  backgroundColor: "rgba(255,255,255,0.2)",
+                  borderRadius: "20px",
+                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  padding: "1.5rem",
+                  backdropFilter: "blur(12px)",
+                  margin: "0 auto",
+                  maxWidth: "400px",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "black",
+                      borderRadius: "50%",
+                      width: 70,
+                      height: 70,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <ImportContactsIcon sx={{ color: "red", fontSize: "36px" }} />
+                  </Box>
+                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+                    Scripture
+                  </Typography>
+                </Box>
 
-      <Typography
-        variant="body1"
-        sx={{
-          color: "black",
-          lineHeight: 1.6,
-          marginTop: "0.75rem",
-          textAlign: "left",
-        }}
-      >
-        The Bible is God’s inspired Word and our guide for life.
-      </Typography>
-    </Box>
-  </Grid>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "black",
+                    lineHeight: 1.6,
+                    marginTop: "0.75rem",
+                    textAlign: "left",
+                  }}
+                >
+                  The Bible is God’s inspired Word and our guide for life.
+                </Typography>
+              </Box>
+            </Grid>
 
-  {/* Card 2 */}
-  <Grid item xs={12} sm={6} md={5} lg={4}>
-    <Box
-      sx={{
-        backgroundColor: "rgba(255,255,255,0.2)",
-        borderRadius: "20px",
-        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        padding: "1.5rem",
-        backdropFilter: "blur(12px)",
-        margin: "0 auto",
-        maxWidth: "400px",
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Box
-          sx={{
-            backgroundColor: "black",
-            borderRadius: "50%",
-            width: 70,
-            height: 70,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginRight: "1rem",
-          }}
-        >
-          <FavoriteBorderOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
-        </Box>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
-          Salvation
-        </Typography>
-      </Box>
+            {/* Card 2 */}
+            <Grid item xs={12} sm={6} md={5} lg={4}>
+              <Box
+                sx={{
+                  backgroundColor: "rgba(255,255,255,0.2)",
+                  borderRadius: "20px",
+                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  padding: "1.5rem",
+                  backdropFilter: "blur(12px)",
+                  margin: "0 auto",
+                  maxWidth: "400px",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "black",
+                      borderRadius: "50%",
+                      width: 70,
+                      height: 70,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <FavoriteBorderOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
+                  </Box>
+                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+                    Salvation
+                  </Typography>
+                </Box>
 
-      <Typography
-        variant="body1"
-        sx={{
-          color: "black",
-          lineHeight: 1.6,
-          marginTop: "0.75rem",
-          textAlign: "left",
-        }}
-      >
-        Salvation is by grace through faith in Jesus alone.
-      </Typography>
-    </Box>
-  </Grid>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "black",
+                    lineHeight: 1.6,
+                    marginTop: "0.75rem",
+                    textAlign: "left",
+                  }}
+                >
+                  Salvation is by grace through faith in Jesus alone.
+                </Typography>
+              </Box>
+            </Grid>
 
-  {/* Card 3 */}
-  <Grid item xs={12} sm={6} md={5} lg={4}>
-    <Box
-      sx={{
-        backgroundColor: "rgba(255,255,255,0.2)",
-        borderRadius: "20px",
-        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        padding: "1.5rem",
-        backdropFilter: "blur(12px)",
-        margin: "0 auto",
-        maxWidth: "400px",
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Box
-          sx={{
-            backgroundColor: "black",
-            borderRadius: "50%",
-            width: 70,
-            height: 70,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginRight: "1rem",
-          }}
-        >
-          <PeopleAltOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
-        </Box>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
-          Community
-        </Typography>
-      </Box>
+            {/* Card 3 */}
+            <Grid item xs={12} sm={6} md={5} lg={4}>
+              <Box
+                sx={{
+                  backgroundColor: "rgba(255,255,255,0.2)",
+                  borderRadius: "20px",
+                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  padding: "1.5rem",
+                  backdropFilter: "blur(12px)",
+                  margin: "0 auto",
+                  maxWidth: "400px",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "black",
+                      borderRadius: "50%",
+                      width: 70,
+                      height: 70,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <PeopleAltOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
+                  </Box>
+                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+                    Community
+                  </Typography>
+                </Box>
 
-      <Typography
-        variant="body1"
-        sx={{
-          color: "black",
-          lineHeight: 1.6,
-          marginTop: "0.75rem",
-          textAlign: "left",
-        }}
-      >
-        We value fellowship and supporting one another in faith.
-      </Typography>
-    </Box>
-  </Grid>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "black",
+                    lineHeight: 1.6,
+                    marginTop: "0.75rem",
+                    textAlign: "left",
+                  }}
+                >
+                  We value fellowship and supporting one another in faith.
+                </Typography>
+              </Box>
+            </Grid>
 
-  {/* Card 4 */}
-  <Grid item xs={12} sm={6} md={5} lg={4}>
-    <Box
-      sx={{
-        backgroundColor: "rgba(255,255,255,0.2)",
-        borderRadius: "20px",
-        boxShadow: "0 0 8px rgba(0,0,0,0.15)",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        padding: "1.5rem",
-        backdropFilter: "blur(12px)",
-        margin: "0 auto",
-        maxWidth: "400px",
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Box
-          sx={{
-            backgroundColor: "black",
-            borderRadius: "50%",
-            width: 70,
-            height: 70,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginRight: "1rem",
-          }}
-        >
-          <LanguageOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
-        </Box>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
-          Mission
-        </Typography>
-      </Box>
+            {/* Card 4 */}
+            <Grid item xs={12} sm={6} md={5} lg={4}>
+              <Box
+                sx={{
+                  backgroundColor: "rgba(255,255,255,0.2)",
+                  borderRadius: "20px",
+                  boxShadow: "0 0 8px rgba(0,0,0,0.15)",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  padding: "1.5rem",
+                  backdropFilter: "blur(12px)",
+                  margin: "0 auto",
+                  maxWidth: "400px",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "black",
+                      borderRadius: "50%",
+                      width: 70,
+                      height: 70,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <LanguageOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
+                  </Box>
+                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+                    Mission
+                  </Typography>
+                </Box>
 
-      <Typography
-        variant="body1"
-        sx={{
-          color: "black",
-          lineHeight: 1.6,
-          marginTop: "0.75rem",
-          textAlign: "left",
-        }}
-      >
-        We’re called to make disciples locally and globally.
-      </Typography>
-    </Box>
-  </Grid>
-</Grid>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "black",
+                    lineHeight: 1.6,
+                    marginTop: "0.75rem",
+                    textAlign: "left",
+                  }}
+                >
+                  We’re called to make disciples locally and globally.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
 
         </Container>
       </section>
+            <section
+              style={{
+                marginTop: "4rem",
+                padding: "5rem 0",
+                backgroundImage: `url(${ActiveTeamsBG})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                position: "relative",
+              }}
+            >
+              {/* Dark Overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  backgroundColor: "rgba(0,0,0,0.55)",
+                  zIndex: 1,
+                }}
+              ></div>
+      
+              <Container sx={{ position: "relative", zIndex: 2, textAlign: "center", border: '' }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: "bold",
+                    color: "white",
+                    mb: 2,
+                    textShadow: "0 3px 8px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  Active Teams
+                </Typography>
+      
+                <Typography
+                  variant="h6"
+                  sx={{
+                    maxWidth: "700px",
+                    margin: "0 auto",
+                    color: "white",
+                    mb: 4,
+                    lineHeight: 1.7,
+                    textShadow: "0 3px 6px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  Active Teams is where leaders grow, disciples are made, and our church
+                  strengthens its foundation. It empowers members to connect, serve, lead,
+                  and grow through structured groups and intentional mentorship.
+                </Typography>
+      
+                <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                  <a
+                    href="https://teams.theactivechurch.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <button
+                      style={{
+                        padding: "20px 28px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        borderRadius: "8px",
+                        border: "none",
+                        cursor: "pointer",
+                        backgroundColor: "black",
+                        color: "white",
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+                        transition: "0.3s",
+                        display: 'flex',
+                        alignItems: 'center',
+                        overflow: 'hidden',
+      
+                      }}
+                      onMouseEnter={(e) => (e.target.style.opacity = "0.85")}
+                      onMouseLeave={(e) => (e.target.style.opacity = "1")}
+                    >
+                      Visit Active Teams
+                    </button>
+                  </a>
+                </Box>
+      
+              </Container>
+            </section>
       {/* Meet Our Leadership Section */}
       <Container sx={{ py: 4 }}>
         <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -488,9 +573,9 @@ function Vision() {
             variant="h4"
             sx={{ fontWeight: "bold", color: "black", mb: 2 }}
           >
-             Meet our Pastors
+            Meet our Pastors
           </Typography>
-          
+
           {/* Pastor Collage Image */}
           <Box
             component="img"
@@ -507,7 +592,7 @@ function Vision() {
               objectPosition: "top"
             }}
           />
-          
+
           <Typography
             variant="h5"
             sx={{ fontWeight: "bold", color: "black" }}
@@ -516,6 +601,7 @@ function Vision() {
           </Typography>
         </Box>
       </Container>
+      {/* Active Teams Section */}
 
     </div>
   );
