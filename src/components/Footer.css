@@ -246,3 +246,139 @@
     font-size: 1.3rem;
   }
 }
+
+/* Reduce large bottom whitespace on small screens */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-bottom: 12px !important;
+    height:70vh
+  }
+
+  .footer-content {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .hr {
+    margin: 8px auto !important;
+    width: 90%;
+  }
+
+  .copyright {
+    margin: 8px 0 12px !important;
+    font-size: 0.78rem;
+  }
+}
+
+/* Tighter for extra-small phones */
+@media (max-width: 360px) {
+  .site-footer {
+    padding-bottom: 8px !important;
+    height:70vh
+  }
+  .hr {
+    margin: 6px auto !important;
+  }
+  .copyright {
+    margin: 6px 0 8px !important;
+  }
+}
+
+/* Tighter footer padding specifically for small devices (iPhone 14 ~390-430px and smaller) */
+@media (max-width: 430px) {
+  .site-footer {
+    padding: 20px 0 10px !important;
+    height:70vh;
+  }
+
+  .footer-content {
+    padding: 0 10px !important;
+    gap: 12px !important;
+  }
+
+  .footer-column {
+    height: auto !important;
+    width: 100% !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer-column-1,
+  .footer-column-2 {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hr {
+    margin: 6px auto !important;
+    width: 92% !important;
+  }
+
+  .copyright {
+    margin: 6px 0 8px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.85rem !important;
+  }
+
+  .footer-social {
+    margin-top: 8px !important;
+    gap: 8px !important;
+  }
+}
+
+/* Extra-tight adjustments for very small phones (≤390px, iPhone 14/13/12 in portrait) */
+@media (max-width: 390px) {
+  .site-footer {
+    padding: 16px 0 8px !important;
+    height:70vh;
+  }
+
+  .footer-content {
+    padding: 0 8px !important;
+    gap: 10px !important;
+  }
+
+  .hr {
+    margin: 5px auto !important;
+    width: 94% !important;
+  }
+
+  .copyright {
+    margin: 4px 0 6px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Minimal for very narrow / old small phones (≤360px) */
+@media (max-width: 360px) {
+  .site-footer {
+    padding: 14px 0 6px !important;
+    height:70vh;
+  }
+
+  .footer-content {
+    padding: 0 6px !important;
+    gap: 8px !important;
+  }
+
+  .hr {
+    margin: 4px auto !important;
+    width: 96% !important;
+  }
+
+  .copyright {
+    margin: 4px 0 4px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.75rem !important;
+  }
+}

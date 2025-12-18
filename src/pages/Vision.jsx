@@ -291,9 +291,11 @@ function Vision() {
         maxWidth: "400px",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box className="belief-row" sx={{ display: "flex", alignItems: "center", gap:"1rem" }}>
         <Box
+          className="belief-icon"
           sx={{
+            gap:"1rem",
             backgroundColor: "black",
             borderRadius: "50%",
             width: 70,
@@ -301,7 +303,7 @@ function Vision() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginRight: "1rem",
+            /* marginRight: "1rem", */ /* spacing now handled by CSS */
           }}
         >
           <ImportContactsIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -329,6 +331,7 @@ function Vision() {
   <Grid item xs={12} sm={6} md={5} lg={4}>
     <Box
       sx={{
+        gap:"1rem",
         backgroundColor: "rgba(255,255,255,0.2)",
         borderRadius: "20px",
         boxShadow: "0 0 8px rgba(0,0,0,0.15)",
@@ -342,9 +345,11 @@ function Vision() {
         maxWidth: "400px",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box className="belief-row" sx={{ display: "flex", alignItems: "center",gap:"1rem" }}>
         <Box
+          className="belief-icon"
           sx={{
+            gap:"1rem",
             backgroundColor: "black",
             borderRadius: "50%",
             width: 70,
@@ -352,7 +357,6 @@ function Vision() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginRight: "1rem",
           }}
         >
           <FavoriteBorderOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -380,6 +384,7 @@ function Vision() {
   <Grid item xs={12} sm={6} md={5} lg={4}>
     <Box
       sx={{
+        gap:"1rem",
         backgroundColor: "rgba(255,255,255,0.2)",
         borderRadius: "20px",
         boxShadow: "0 0 8px rgba(0,0,0,0.15)",
@@ -393,9 +398,11 @@ function Vision() {
         maxWidth: "400px",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box className="belief-row" sx={{ display: "flex", alignItems: "center" ,gap:"1rem"}}>
         <Box
+          className="belief-icon"
           sx={{
+            gap:"1rem",
             backgroundColor: "black",
             borderRadius: "50%",
             width: 70,
@@ -403,7 +410,6 @@ function Vision() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginRight: "1rem",
           }}
         >
           <PeopleAltOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -431,6 +437,7 @@ function Vision() {
   <Grid item xs={12} sm={6} md={5} lg={4}>
     <Box
       sx={{
+        gap:"1rem",
         backgroundColor: "rgba(255,255,255,0.2)",
         borderRadius: "20px",
         boxShadow: "0 0 8px rgba(0,0,0,0.15)",
@@ -444,9 +451,11 @@ function Vision() {
         maxWidth: "400px",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box className="belief-row" sx={{ display: "flex", alignItems: "center", gap:"1rem"}}>
         <Box
+          className="belief-icon"
           sx={{
+            gap:"1rem",
             backgroundColor: "black",
             borderRadius: "50%",
             width: 70,
@@ -454,7 +463,6 @@ function Vision() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginRight: "1rem",
           }}
         >
           <LanguageOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -497,14 +505,19 @@ function Vision() {
             src={PastorCollage}
             alt="Pastor Gavin & Pastor Vicky"
             sx={{
-              width: "80%",
+              display: "block",         // remove inline gaps and allow centering
+              margin: "0 auto",        // center the image
+              width: "100%",
               maxWidth: "800px",
               height: "700px",
+              boxSizing: "border-box", // ensure no extra internal spacing
               borderRadius: "20px",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+              boxShadow: "none",
               mb: 3,
               objectFit: "cover",
-              objectPosition: "top"
+              objectPosition: "top",
+              padding: 0,              // remove padding
+              background: "none"
             }}
           />
           
