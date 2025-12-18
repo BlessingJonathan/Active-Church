@@ -10,10 +10,10 @@ import WhatWeBelieve from "../assets/img4.jpeg"
 import PastorCollage from "../assets/WhatsApp Image 2025-10-02 at 1.29.44 PM.jpeg"
 import ActiveTeamsBG from "../assets/WhatsApp Image 2025-12-05 at 21.03.38_32206319.jpg";
 import "./Vision.css";
+
 function Vision() {
   return (
     <div>
-
       <section
         style={{
           color: "white",
@@ -27,7 +27,6 @@ function Vision() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           position: "relative",
-
           padding: "4%",
         }}
       >
@@ -65,15 +64,16 @@ function Vision() {
           </Typography>
         </Container>
       </section>
+
       <section
         className="our-vision-content"
-        style={{ padding: "2rem", marginTop: "4rem" }} // added margin-top
+        style={{ padding: "2rem", marginTop: "4rem" }}
       >
         <Container>
           <div
             style={{
               display: "flex",
-              alignItems: "center", // center "Our Vision" vertically
+              alignItems: "center",
               justifyContent: "flex-start",
               gap: "2rem",
               flexWrap: "wrap",
@@ -82,7 +82,6 @@ function Vision() {
               marginLeft: "2rem",
             }}
           >
-            {/* Left: Our Vision */}
             <Typography
               variant="h4"
               gutterBottom
@@ -96,7 +95,6 @@ function Vision() {
               Our Vision
             </Typography>
 
-            {/* Right: Paragraph */}
             <Typography
               variant="body1"
               paragraph
@@ -116,10 +114,8 @@ function Vision() {
         </Container>
       </section>
 
-
-      <section >
+      <section>
         <Container>
-          {/* Row 1: Image Left, Text Right */}
           <Box
             sx={{
               display: "flex",
@@ -130,22 +126,20 @@ function Vision() {
               gap: "2rem",
             }}
           >
-            {/* Image */}
             <Box
               component="img"
               src={Children}
               alt="Active Church Kids"
               sx={{
                 width: { xs: "100%", md: "40%" },
-                borderRadius: "24px", // curved edges
-                boxShadow: "none",    // remove shadow
+                borderRadius: "24px",
+                boxShadow: "none",
                 objectFit: "cover",
-                padding: 0,           // remove padding
-                background: "none",   // remove background
+                padding: 0,
+                background: "none",
                 display: "block",
               }}
             />
-            {/* Text */}
             <Box sx={{ flex: 1, maxWidth: "600px" }}>
               <Typography
                 variant="h4"
@@ -167,7 +161,6 @@ function Vision() {
             </Box>
           </Box>
 
-          {/* Row 2: Text Left, Image Right */}
           <Box
             sx={{
               display: "flex",
@@ -177,7 +170,6 @@ function Vision() {
               gap: "2rem",
             }}
           >
-            {/* Text */}
             <Box sx={{ flex: 1, maxWidth: "600px", overflow: "hidden" }}>
               <Typography
                 variant="h4"
@@ -197,25 +189,24 @@ function Vision() {
                 sx={{ lineHeight: 1.6, overflow: "hidden" }}
               >
                 Active Youth is about young people who are passionate about Christ.
-                It’s about youth who are winning in their lives and pursuing a
+                It's about youth who are winning in their lives and pursuing a
                 relationship with their Saviour as they change the world around them.
                 Enjoy a great variety of entertaining evenings mixed with the power
                 of the Word.
               </Typography>
             </Box>
 
-            {/* Image */}
             <Box
               component="img"
               src={Youth}
               alt="Active Youth"
               sx={{
                 width: { xs: "100%", md: "40%" },
-                borderRadius: "24px", // curved edges
-                boxShadow: "none",    // remove shadow
+                borderRadius: "24px",
+                boxShadow: "none",
                 objectFit: "cover",
-                padding: 0,           // remove padding
-                background: "none",   // remove background
+                padding: 0,
+                background: "none",
                 display: "block",
               }}
             />
@@ -228,13 +219,12 @@ function Vision() {
           position: "relative",
           padding: "4rem 0",
           marginTop: "16px",
-          backgroundImage: `url(${WhatWeBelieve})`, // Change this path
+          backgroundImage: `url(${WhatWeBelieve})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Full White Blur Overlay */}
         <div
           style={{
             position: "absolute",
@@ -242,14 +232,13 @@ function Vision() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(255, 255, 255, 0.4)", // Soft white
-            backdropFilter: "blur(2px)", // Strong blur effect
+            backgroundColor: "rgba(255, 255, 255, 0.4)",
+            backdropFilter: "blur(2px)",
             zIndex: 1,
           }}
         ></div>
 
         <Container sx={{ position: "relative", zIndex: 2 }}>
-          {/* Section Title */}
           <Typography
             variant="h3"
             gutterBottom
@@ -267,7 +256,6 @@ function Vision() {
             Jesus Christ.
           </Typography>
 
-          {/* Cards Grid */}
           <Grid
             container
             spacing={4}
@@ -292,8 +280,9 @@ function Vision() {
                   maxWidth: "400px",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box className="belief-row" sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                   <Box
+                    className="belief-icon"
                     sx={{
                       backgroundColor: "black",
                       borderRadius: "50%",
@@ -302,7 +291,6 @@ function Vision() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      marginRight: "1rem",
                     }}
                   >
                     <ImportContactsIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -321,7 +309,7 @@ function Vision() {
                     textAlign: "left",
                   }}
                 >
-                  The Bible is God’s inspired Word and our guide for life.
+                  The Bible is God's inspired Word and our guide for life.
                 </Typography>
               </Box>
             </Grid>
@@ -343,8 +331,9 @@ function Vision() {
                   maxWidth: "400px",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box className="belief-row" sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                   <Box
+                    className="belief-icon"
                     sx={{
                       backgroundColor: "black",
                       borderRadius: "50%",
@@ -353,7 +342,6 @@ function Vision() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      marginRight: "1rem",
                     }}
                   >
                     <FavoriteBorderOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -394,8 +382,9 @@ function Vision() {
                   maxWidth: "400px",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box className="belief-row" sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                   <Box
+                    className="belief-icon"
                     sx={{
                       backgroundColor: "black",
                       borderRadius: "50%",
@@ -404,7 +393,6 @@ function Vision() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      marginRight: "1rem",
                     }}
                   >
                     <PeopleAltOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -445,8 +433,9 @@ function Vision() {
                   maxWidth: "400px",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box className="belief-row" sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                   <Box
+                    className="belief-icon"
                     sx={{
                       backgroundColor: "black",
                       borderRadius: "50%",
@@ -455,7 +444,6 @@ function Vision() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      marginRight: "1rem",
                     }}
                   >
                     <LanguageOutlinedIcon sx={{ color: "red", fontSize: "36px" }} />
@@ -474,99 +462,96 @@ function Vision() {
                     textAlign: "left",
                   }}
                 >
-                  We’re called to make disciples locally and globally.
+                  We're called to make disciples locally and globally.
                 </Typography>
               </Box>
             </Grid>
           </Grid>
-
         </Container>
       </section>
-            <section
-              style={{
-                marginTop: "4rem",
-                padding: "5rem 0",
-                backgroundImage: `url(${ActiveTeamsBG})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                position: "relative",
-              }}
+
+      <section
+        style={{
+          marginTop: "4rem",
+          padding: "5rem 0",
+          backgroundImage: `url(${ActiveTeamsBG})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,0.55)",
+            zIndex: 1,
+          }}
+        ></div>
+
+        <Container sx={{ position: "relative", zIndex: 2, textAlign: "center" }}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              color: "white",
+              mb: 2,
+              textShadow: "0 3px 8px rgba(0,0,0,0.6)",
+            }}
+          >
+            Active Teams
+          </Typography>
+
+          <Typography
+            variant="h6"
+            sx={{
+              maxWidth: "700px",
+              margin: "0 auto",
+              color: "white",
+              mb: 4,
+              lineHeight: 1.7,
+              textShadow: "0 3px 6px rgba(0,0,0,0.6)",
+            }}
+          >
+            Active Teams is where leaders grow, disciples are made, and our church
+            strengthens its foundation. It empowers members to connect, serve, lead,
+            and grow through structured groups and intentional mentorship.
+          </Typography>
+
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+            <a
+              href="https://teams.theactivechurch.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              {/* Dark Overlay */}
-              <div
+              <button
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  backgroundColor: "rgba(0,0,0,0.55)",
-                  zIndex: 1,
+                  padding: "20px 28px",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  borderRadius: "8px",
+                  border: "none",
+                  cursor: "pointer",
+                  backgroundColor: "black",
+                  color: "white",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+                  transition: "0.3s",
+                  display: 'flex',
+                  alignItems: 'center',
+                  overflow: 'hidden',
                 }}
-              ></div>
-      
-              <Container sx={{ position: "relative", zIndex: 2, textAlign: "center", border: '' }}>
-                <Typography
-                  variant="h4"
-                  sx={{
-                    fontWeight: "bold",
-                    color: "white",
-                    mb: 2,
-                    textShadow: "0 3px 8px rgba(0,0,0,0.6)",
-                  }}
-                >
-                  Active Teams
-                </Typography>
-      
-                <Typography
-                  variant="h6"
-                  sx={{
-                    maxWidth: "700px",
-                    margin: "0 auto",
-                    color: "white",
-                    mb: 4,
-                    lineHeight: 1.7,
-                    textShadow: "0 3px 6px rgba(0,0,0,0.6)",
-                  }}
-                >
-                  Active Teams is where leaders grow, disciples are made, and our church
-                  strengthens its foundation. It empowers members to connect, serve, lead,
-                  and grow through structured groups and intentional mentorship.
-                </Typography>
-      
-                <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                  <a
-                    href="https://teams.theactivechurch.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <button
-                      style={{
-                        padding: "20px 28px",
-                        fontSize: "16px",
-                        fontWeight: "bold",
-                        borderRadius: "8px",
-                        border: "none",
-                        cursor: "pointer",
-                        backgroundColor: "black",
-                        color: "white",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-                        transition: "0.3s",
-                        display: 'flex',
-                        alignItems: 'center',
-                        overflow: 'hidden',
-      
-                      }}
-                      onMouseEnter={(e) => (e.target.style.opacity = "0.85")}
-                      onMouseLeave={(e) => (e.target.style.opacity = "1")}
-                    >
-                      Visit Active Teams
-                    </button>
-                  </a>
-                </Box>
-      
-              </Container>
-            </section>
-      {/* Meet Our Leadership Section */}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.85")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                Visit Active Teams
+              </button>
+            </a>
+          </Box>
+        </Container>
+      </section>
+
       <Container sx={{ py: 4 }}>
         <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography
@@ -576,20 +561,24 @@ function Vision() {
             Meet our Pastors
           </Typography>
 
-          {/* Pastor Collage Image */}
           <Box
             component="img"
             src={PastorCollage}
             alt="Pastor Gavin & Pastor Vicky"
             sx={{
-              width: "80%",
+              display: "block",
+              margin: "0 auto",
+              width: "100%",
               maxWidth: "800px",
               height: "700px",
+              boxSizing: "border-box",
               borderRadius: "20px",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+              boxShadow: "none",
               mb: 3,
               objectFit: "cover",
-              objectPosition: "top"
+              objectPosition: "top",
+              padding: 0,
+              background: "none"
             }}
           />
 
@@ -601,8 +590,6 @@ function Vision() {
           </Typography>
         </Box>
       </Container>
-      {/* Active Teams Section */}
-
     </div>
   );
 }
