@@ -7,6 +7,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import { Stack } from '@mui/material';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+
 const Footer = () => {
   return (
     <footer className="site-footer">
@@ -50,6 +52,10 @@ const Footer = () => {
               <Stack direction="row" alignItems="center" spacing={1}>
                 <EmailOutlinedIcon fontSize="small" className="email-icon" />
                 <span>info@theactivechurch.org</span>
+              </Stack>
+              <Stack className='help-desk' direction="row" alignItems="center" spacing={1}>
+                <SupportAgentIcon fontSize="small" className="support-agent-icon" />
+                <span><a href="https://activemediahelpdesk.netlify.app/">Help desk</a></span>
               </Stack>
             </div>
           </div>
